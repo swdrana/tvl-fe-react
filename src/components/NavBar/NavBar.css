@@ -1,0 +1,152 @@
+General Navbar Styling
+nav {
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    font-family: Arial, sans-serif;
+  }
+
+  /*  */
+  
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo Section */
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  p {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Menu Items */
+  .menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  
+  .menu a:hover {
+    color: #2563eb; /* Blue-600 */
+  }
+  
+  /* Show Menu on Toggle */
+  .menu.block {
+    display: flex; /* Show menu on toggle for mobile/tablet */
+  }
+  
+  /* Tablet-Only Buttons */
+  .tablet-actions {
+    display: none; /* Hidden by default */
+  }
+  
+  /* Button Styling */
+  .btn-secondary {
+    border: 1px solid #2563eb; /* Blue-600 */
+    color: #2563eb;
+    background: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f3f4f6; /* Gray-100 */
+  }
+  
+  .btn-primary {
+    background-color: #2563eb; /* Blue-600 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1d4ed8; /* Blue-700 */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: block; /* Shown only on mobile/tablet */
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  
+  /* Responsive Design */
+  /* Mobile */
+  @media (max-width: 768px) {
+    .menu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      z-index: 1000;
+    }
+  
+    .tablet-actions {
+      display: none; /* Hidden on mobile */
+    }
+  }
+  
+  /* Tablet (768px - 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .tablet-actions {
+      display: flex; /* Show only on tablets */
+      gap: 1rem;
+    }
+  
+    .btn-secondary,
+    .btn-primary {
+      padding: 0.3rem 0.8rem; /* Smaller padding for tablets */
+      font-size: 0.9rem; /* Smaller font size for tablets */
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1025px) {
+    .menu {
+      display: flex; /* Always visible on desktop */
+      flex-direction: row;
+    }
+  
+    .hamburger {
+      display: none; /* Hide on desktop */
+    }
+  
+    .tablet-actions {
+      display: flex; /* Visible on desktop */
+    }
+  
+    .btn-secondary,
+    .btn-primary {
+      padding: 0.5rem 1rem; /* Default button size for desktop */
+      font-size: 1rem;
+    }
+  }
+  

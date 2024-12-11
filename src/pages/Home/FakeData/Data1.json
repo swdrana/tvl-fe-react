@@ -1,0 +1,31 @@
+{
+    "testimonials": [
+      {
+        "name": "Kelvin Chng",
+        "image": "https://i.ibb.co.com/gjzMC4Y/dp1.jpg",
+        "title": "CTO & Co-Founder of Carro",
+        "stats": "80%",
+        "subtitle": "efficiency increase",
+        "logo": "https://i.ibb.co.com/mJ6zxDT/Carro-Logo-1.png",
+        "text": "Lark has been a wonderful addition to our toolbox. The solutions offered, especially in the powerful custom integrations, make Lark a powerful tool for companies looking for a workplace superapp."
+      },
+      {
+        "name": "Yang Xibei",
+        "image": "https://i.ibb.co.com/yYzWPpF/dp2.jpg",
+        "title": "Director of Branding and Marketing at Haidilao",
+        "stats": "60,000",
+        "subtitle": "hours saved (and counting)",
+        "logo": "https://i.ibb.co.com/b3L7hjW/haidiliao.png",
+        "text": "Lark has significantly boosted our efficiency without juggling paperwork and multiple tools. Lark not only empowers us to provide the service we have been proud of, but also helps us pave the way for all restaurant managers to solve their growth challenges through digitization."
+      },
+      {
+        "name": "Mengjie Liu",
+        "image": "https://i.ibb.co.com/J2THV65/dp3.webp",
+        "title": "Head of Human Resources, SSC at Advance Intelligence",
+        "stats": "1400+",
+        "subtitle": "global employees use Lark",
+        "logo": "https://i.ibb.co.com/L8cbbVm/advance.png",
+        "text": "If you're operating on a multinational scale and aiming to enhance global collaboration, Lark is the ideal solution. Its 'all-in-one' framework simplifies enterprise-level operations, earning high praise from our team members."
+      }
+    ]
+}

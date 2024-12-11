@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Base",
+    "description": "Build workflows and dashboards without code",
+    "icon": "https://i.ibb.co.com/Xb8ZRzr/basee.jpg"
+  },
+  {
+    "name": "Email",
+    "description": "Secure and convenient corporate email for free",
+    "icon": "https://i.ibb.co.com/CMxL9Vm/maill.jpg"
+  },
+  {
+    "name": "Messenger",
+    "description": "Connect with teams and get more done in chat",
+    "icon": "https://i.ibb.co.com/BKKF71w/messenger.jpg"
+  },
+  {
+    "name": "Slides",
+    "description": "The canvas to unleash your creativity",
+    "icon": "https://i.ibb.co.com/Hz5TJdj/slides.png"
+  },
+  {
+    "name": "Docs",
+    "description": "Online documents for efficient collaboration",
+    "icon": "https://i.ibb.co.com/R3vBNLS/docs.png"
+  },
+  {
+    "name": "Minutes",
+    "description": "Focus on conversations, not notetaking",
+    "icon": "https://i.ibb.co.com/hZQS2ZH/minutes.jpg"
+  },
+  {
+    "name": "Calendar",
+    "description": "Create, manage, and share schedules for work",
+    "icon": "https://i.ibb.co.com/NmPfYqv/calender.jpg"
+  },
+  {
+    "name": "Forms",
+    "description": "Intuitive form builder to collect and organize info",
+    "icon": "https://i.ibb.co.com/J23sGC5/forms.png"
+  },
+  {
+    "name": "Wiki",
+    "description": "Build a single source of truth for your business",
+    "icon": "https://i.ibb.co.com/vQTrcZn/m-Ru-FNIyra-FZRVq-HNSd1gf-P4izg.jpg"
+  },
+  {
+    "name": "Approval",
+    "description": "Streamline business processes of all kinds",
+    "icon": "https://i.ibb.co.com/9TzsFGc/approvall.png"
+  },
+  {
+    "name": "Rooms",
+    "description": "Manage meeting space and equipment easily",
+    "icon": "https://i.ibb.co.com/L0ZnkD1/rooms.jpg"
+  },
+  {
+    "name": "Meetings",
+    "description": "Powerful in-call content sharing and translations",
+    "icon": "https://i.ibb.co.com/Nn9yPHr/meetings.jpg"
+  },
+  {
+    "name": "Webinar",
+    "description": "Reach and engage your audiences at scale",
+    "icon": "https://i.ibb.co.com/1Tn7dkb/webinar.png"
+  },
+  {
+    "name": "Meegle",
+    "description": "Comprehensive project management for teams",
+    "icon": "https://i.ibb.co.com/yY6vv60/meegle.png"
+  },
+  {
+    "name": "OKR",
+    "description": "Build, align and track business goals",
+    "icon": "https://i.ibb.co.com/tY35PZj/okr.jpg"
+  },
+  {
+    "name": "AnyCross",
+    "description": "Unlock boundless integration potential",
+    "icon": "https://i.ibb.co/bKJDZMs/icon-anycross.png"
+  },
+  {
+    "name": "Open Platform",
+    "description": "Customize Lark with diverse, powerful APIs",
+    "icon": "https://i.ibb.co.com/dmHQCpw/oneplatform.png"
+  }
+]

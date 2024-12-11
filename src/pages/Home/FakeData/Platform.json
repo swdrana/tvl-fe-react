@@ -1,0 +1,48 @@
+{
+    "testimonials": [
+      {
+        "label": "Base",
+        "icon": "https://i.ibb.co.com/Xb8ZRzr/basee.jpg"
+      },
+      {
+        "label": "Email",
+        "icon": "https://i.ibb.co.com/CMxL9Vm/maill.jpg"
+      },
+      {
+        "label": "Slides",
+        "icon": "https://i.ibb.co.com/Hz5TJdj/slides.png"
+      },
+      {
+        "label": "Docs",
+        "icon": "https://i.ibb.co.com/R3vBNLS/docs.png"
+      },
+      {
+        "label": "Meetings",
+        "icon": "https://i.ibb.co.com/Nn9yPHr/meetings.jpg"
+      },
+      {
+        "label": "Messenger",
+        "icon": "https://i.ibb.co.com/BKKF71w/messenger.jpg"
+      },
+      {
+        "label": "Wiki",
+        "icon": "https://i.ibb.co.com/vQTrcZn/m-Ru-FNIyra-FZRVq-HNSd1gf-P4izg.jpg"
+      },
+      {
+        "label": "Forms",
+        "icon": "https://i.ibb.co.com/J23sGC5/forms.png"
+      },
+      {
+        "label": "Approval",
+        "icon": "https://i.ibb.co.com/9TzsFGc/approvall.png"
+      },
+      {
+        "label": "Minutes",
+        "icon": "https://i.ibb.co.com/hZQS2ZH/minutes.jpg"
+      },
+      {
+        "label": "Calender",
+        "icon": "https://i.ibb.co.com/NmPfYqv/calender.jpg"
+      }
+    ]
+}
