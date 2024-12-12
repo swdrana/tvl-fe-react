@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 export default function NavBar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [menuActive, setMenuActive] = useState(false);
-  const [productOptions, setProductOptions] = useState([]);
-  const [dropdownHovered, setDropdownHovered] = useState(false);
+  const [menuData, setMenuData] = useState({}); // Holds all dropdown data
+  const [hoveredMenu, setHoveredMenu] = useState(null); // Track the currently hovered menu
 
   const navigate = useNavigate();
 
@@ -14,27 +14,56 @@ export default function NavBar() {
   };
 
   useEffect(() => {
-    // Fetch product options from JSON file
-    fetch('/src/components/FakeData/Products.json')
-      .then((response) => response.json())
-      .then((data) => setProductOptions(data))
-      .catch((error) => console.error("Error fetching product data:", error));
+    // Fetch data for all dropdowns
+    const fetchMenuData = async () => {
+      try {
+        const productData = await fetch("src/components/NavBar/Products.json").then((res) =>
+          res.json()
+        );
+        const solutionsData = await fetch(
+          "src/components/NavBar/Products.json"
+        ).then((res) => res.json());
+        const resourcesData = await fetch(
+          "src/components/NavBar/Products.json"
+        ).then((res) => res.json());
+        const blogData = await fetch("src/components/NavBar/Products.json").then((res) =>
+          res.json()
+        );
+
+        setMenuData({
+          Product: productData,
+          Solutions: solutionsData,
+          Resources: resourcesData,
+          Blog: blogData,
+        });
+      } catch (error) {
+        console.error("Error fetching menu data:", error);
+      }
+    };
+
+    fetchMenuData();
   }, []);
 
-  const handleMouseEnter = () => {
-    setOpenDropdown("Product");
+  const toggleDropdown = (menu) => {
+    setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseEnter = (menu) => {
+    setHoveredMenu(menu); // Track which menu is being hovered
+    setOpenDropdown(menu); // Open the dropdown on hover
+  };
+
+  const handleMouseLeave = (menu) => {
+    setHoveredMenu(null); // Reset the hovered menu
     setTimeout(() => {
-      if (!dropdownHovered) {
-        setOpenDropdown(null);
+      if (hoveredMenu !== menu) {
+        setOpenDropdown(null); // Hide the dropdown only if the menu is no longer hovered
       }
-    }, 200);
+    }, 200); // Delay to allow the mouse to move to the dropdown
   };
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white px-6 py-4 fixed top-0 left-0 z-50">
+    <nav className="w-full border-b border-gray-200 shadow-lg bg-white px-6 py-4 fixed top-0 left-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-8">
@@ -49,10 +78,7 @@ export default function NavBar() {
         </div>
 
         {/* Hamburger Menu for Mobile/Tablet */}
-        <button
-          className="hamburger md:hidden text-2xl"
-          onClick={toggleMenu}
-        >
+        <button className="hamburger md:hidden text-2xl" onClick={toggleMenu}>
           ☰
         </button>
 
@@ -62,65 +88,59 @@ export default function NavBar() {
             menuActive ? "block" : "hidden"
           }`}
         >
-          <div
-            className="relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <button className="flex items-center hover:text-blue-600 text-l font-semibold">
-              Product
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            {openDropdown === "Product" && (
-              <div
-                className="absolute mt-2 w-80 bg-white shadow-lg rounded-lg p-4 grid grid-cols-1 gap-4"
-                onMouseEnter={() => setDropdownHovered(true)}
-                onMouseLeave={() => {
-                  setDropdownHovered(false);
-                  setOpenDropdown(null);
-                }}
-              >
-                {productOptions.map((item, index) => (
-                  <button
-                    key={index}
-                    onClick={() => alert(`Clicked on ${item.name}`)}
-                    className="flex items-center space-x-4 w-full p-3 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <img
-                      src={item.icon}
-                      alt={`${item.name} Icon`}
-                      className="w-8 h-8"
-                    />
-                    <div className="text-left">
-                      <p className="font-semibold text-sm text-blue-600">
-                        {item.name}
-                      </p>
-                      <p className="text-gray-500 text-xs">{item.description}</p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {["Solutions", "Resources", "Blog"].map((menu) => (
-            <div key={menu} className="relative">
+          {["Product", "Solutions", "Resources", "Blog"].map((menu) => (
+            <div
+              key={menu}
+              className="relative"
+              onMouseEnter={() => handleMouseEnter(menu)} // Expands dropdown on hover
+              onMouseLeave={() => handleMouseLeave(menu)} // Hides dropdown on mouse leave
+            >
               <button
                 className="flex items-center hover:text-blue-600 text-l font-semibold"
+                onClick={() => toggleDropdown(menu)} // Expands dropdown on click
               >
                 {menu}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </button>
+              {openDropdown === menu && menuData[menu] && (
+                <div
+                  className="absolute top-14 -ml-56 left-0 w-full bg-white shadow-lg rounded-lg p-4 grid grid-cols-3 gap-4 z-10"
+                  style={{ width: "100vw" }} // Full width of the page
+                >
+                  {menuData[menu].map((item, index) => (
+                    <button
+                      key={index}
+                      onClick={() => alert(`Clicked on ${item.name}`)}
+                      className="flex items-center space-x-4 w-full p-3 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                      <img
+                        src={item.icon}
+                        alt={`${item.name} Icon`}
+                        className="w-8 h-8"
+                      />
+                      <div className="text-left">
+                        <p className="font-semibold text-sm text-blue-600">
+                          {item.name}
+                        </p>
+                        <p className="text-gray-500 text-xs">
+                          {item.description}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
           <button className="hover:text-blue-600 text-l font-semibold">

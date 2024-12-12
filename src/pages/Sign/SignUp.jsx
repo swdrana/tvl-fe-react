@@ -1,8 +1,11 @@
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { IoLogoApple } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row relative">
       {/* Top Right Buttons */}
@@ -166,6 +169,15 @@ const SignUp = () => {
           </a>
           .
         </p>
+        <div className="mt-4 text-center text-sm text-gray-600">
+          Already joined in an organization?{' '}
+          <button
+            onClick={() => navigate("/signin")}
+            className="text-blue-500 underline"
+          >
+            Sign in now
+          </button>
+        </div>
       </div>
     </div>
   );
