@@ -23,7 +23,7 @@ const Anything = () => {
         </p>
         <button
           className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40"
-          onClick={() => navigate("/base")}
+          onClick={() => navigate("")}
         >
           Try for free
         </button>
@@ -32,7 +32,7 @@ const Anything = () => {
       <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {/* Base Card */}
         <div
-          onClick={() => console.log("Base Card Clicked")}
+          onClick={() => navigate("/base")}
           className="group cursor-pointer p-6 bg-cover bg-center rounded-xl shadow-md hover:border-blue-500 border-2 border-transparent transition-all h-[600px] flex flex-col justify-between"
           style={{
             backgroundImage: "url('https://i.ibb.co/RzxK22H/uit-Gm-CA62-TN966-Zbm-Yi-Dt16y6ng.jpg')",

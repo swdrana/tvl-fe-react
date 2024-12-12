@@ -3,7 +3,7 @@ import Home from "../pages/Home/Home";
 import Main from "./Main";
 import SignIn from "../pages/Sign/SignIn";
 import SignUp from "../pages/Sign/SignUp";
-import Banner from "../pages/Base/Banner";
+import Base from "../pages/Base/Base"
 
 const RouteTree = () => {
   return (
@@ -13,7 +13,9 @@ const RouteTree = () => {
       </Route>
       <Route path="/signin" element={<SignIn></SignIn>} />
       <Route path="/signup" element={<SignUp></SignUp>} />
-      <Route path="/base" element={<Banner></Banner>} />
+      <Route path="/base" element={<Main />}>
+        <Route index element={<Base></Base>} />
+      </Route>
     </Routes>
   );
 };
