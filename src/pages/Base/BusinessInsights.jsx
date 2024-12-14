@@ -19,7 +19,7 @@ const BusinessInsights = () => {
 
         {/* Right Side: Video */}
         <div className="mt-8 lg:mt-0 lg:w-1/2">
-          <img src="https://i.ibb.co.com/TYRBxQj/base3.jpg" alt="" className="rounded-lg"/>
+          <img src="https://i.ibb.co.com/TYRBxQj/base3.jpg" alt="" className="rounded-xl"/>
         </div>
       </div>
     </div>

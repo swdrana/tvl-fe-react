@@ -1,5 +1,7 @@
 import Banner from "./Banner";
+import BusinessForm from "./BusinessForm";
 import BusinessInsights from "./BusinessInsights";
+import FAQ from "./FAQ";
 import FieldOperation from "./FieldOperation";
 import Import from "./Import";
 import NeccessaryApp from "./NeccessaryApp";
@@ -15,7 +17,9 @@ const Base = () => {
        <FieldOperation></FieldOperation>
        <BusinessInsights></BusinessInsights>
        <ProcessOptimization></ProcessOptimization>
+       <BusinessForm></BusinessForm>
        <NeccessaryApp></NeccessaryApp>
+       <FAQ></FAQ>
        </>
     );
 };

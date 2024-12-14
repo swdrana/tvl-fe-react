@@ -7,7 +7,7 @@ const FieldOperation = () => {
             <img
               src="https://i.ibb.co.com/X2JXm48/base2.jpg"
               alt="AI Configuration"
-              className="rounded-lg shadow-lg"
+              className="rounded-xl shadow-lg"
             />
           </div>
   

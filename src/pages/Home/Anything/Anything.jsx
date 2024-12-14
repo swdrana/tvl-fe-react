@@ -56,7 +56,7 @@ const Anything = () => {
 
         {/* Messenger Card */}
         <div
-          onClick={() => console.log("Messenger Card Clicked")}
+          onClick={() => navigate("/messenger")}
           className="group cursor-pointer p-6 bg-cover bg-center rounded-xl shadow-md hover:border-green-500 border-2 border-transparent transition-all h-[600px] flex flex-col justify-between"
           style={{
             backgroundImage: "url('https://i.ibb.co/9btPk0X/Hqt-AGv-Qfpkx-Zqx8-Nqo-Wn-Syf3aa0.jpg')",
@@ -80,7 +80,7 @@ const Anything = () => {
 
         {/* Approval Card */}
         <div
-          onClick={() => console.log("Approval Card Clicked")}
+          onClick={() => navigate("/approval")}
           className="group cursor-pointer p-6 bg-cover bg-center rounded-xl shadow-md hover:border-red-500 border-2 border-transparent transition-all h-[600px] flex flex-col justify-between"
           style={{
             backgroundImage: "url('https://i.ibb.co/R7sq5Km/Uvh53moo-GSs-Hy-Lu-Vrev-RGIJIi-Ao.jpg')",

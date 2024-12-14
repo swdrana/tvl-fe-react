@@ -7,7 +7,7 @@ const NewRealise = () => {
             <img
               src="https://i.ibb.co/VqvPPNg/6j2-PEhd-GJ4-Hbr-Dx-Zb-R2kyj-S940.webp"
               alt="AI Configuration"
-              className="rounded-lg shadow-lg"
+              className="rounded-xl shadow-lg"
             />
           </div>
   

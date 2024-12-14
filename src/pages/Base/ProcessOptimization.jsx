@@ -7,7 +7,7 @@ const ProcessOptimization = () => {
             <img
               src="https://i.ibb.co.com/C83gg05/base4.jpg"
               alt="AI Configuration"
-              className="rounded-lg shadow-lg"
+              className="rounded-xl shadow-lg"
             />
           </div>
   
