@@ -2,47 +2,80 @@
     "testimonials": [
       {
         "label": "Base",
-        "icon": "https://i.ibb.co.com/Xb8ZRzr/basee.jpg"
+        "icon": "https://i.ibb.co.com/Xb8ZRzr/basee.jpg",
+        "title": "Build automated workflows and real-time dashboards—no code needed ",
+        "description": "Manage projects efficiently by automating workflows to nudge and notify. Get progress insights with customized dashboards and automated reporting. Visualise and manage progress with 7+ views including Timeline, Kanban, Gantt charts.",
+        "image": "https://i.ibb.co.com/kgmVNtP/base.jpg"
       },
       {
         "label": "Email",
-        "icon": "https://i.ibb.co.com/CMxL9Vm/maill.jpg"
-      },
-      {
-        "label": "Slides",
-        "icon": "https://i.ibb.co.com/Hz5TJdj/slides.png"
+        "icon": "https://i.ibb.co.com/CMxL9Vm/maill.jpg",
+        "title": "Send and receive emails securely",
+        "description": "Connect your custom corporate domain to Lark Email for intuitive collaboration. Share emails and receive new email notifications in chat, automatically generate calendar meetings through email invites, and enable offline reading access. Lark syncs all mail across multiple devices to ensure you're always up to date.",
+        "image": "https://i.ibb.co.com/6nRXfDT/email.jpg"
       },
       {
         "label": "Docs",
-        "icon": "https://i.ibb.co.com/R3vBNLS/docs.png"
+        "icon": "https://i.ibb.co.com/R3vBNLS/docs.png",
+        "title": "Craft rich-media docs to convey ideas, action plans, SOPs and more!",
+        "description": "Brainstorm, build mind maps, embed videos, create process flows, and include task lists for powerful collaboration that turns ideas to action. Sync document in real-time and control access with advanced permissions.",
+        "image": "https://i.ibb.co.com/ZLpFSrW/docs.jpg"
       },
       {
         "label": "Meetings",
-        "icon": "https://i.ibb.co.com/Nn9yPHr/meetings.jpg"
+        "icon": "https://i.ibb.co.com/Nn9yPHr/meetings.jpg",
+        "title": "Get on the same page with in-call doc sharing and translation in video meetings",
+        "description": "Enhance productivity with features intelligent meeting summaries, real-time translation in 18+ languages, and a mobile-friendly interface. Collaborate on live documents within the video call, allowing simultaneous scrolling and editing without screen sharing.",
+        "image": "https://i.ibb.co.com/LZ2RsCD/meetings.jpg"
       },
       {
         "label": "Messenger",
-        "icon": "https://i.ibb.co.com/BKKF71w/messenger.jpg"
+        "icon": "https://i.ibb.co.com/BKKF71w/messenger.jpg",
+        "title": "Securely Chat With Your Team",
+        "description": "Create group chats, threads, and topic groups to keep conversations focused. Messages get auto-translated for frictionless global collaboration. ",
+        "image": "https://i.ibb.co.com/842hLgf/messenger.jpg"
       },
       {
         "label": "Wiki",
-        "icon": "https://i.ibb.co.com/vQTrcZn/m-Ru-FNIyra-FZRVq-HNSd1gf-P4izg.jpg"
+        "icon": "https://i.ibb.co.com/vQTrcZn/m-Ru-FNIyra-FZRVq-HNSd1gf-P4izg.jpg",
+        "title": "Use Wiki spaces as a source of truth",
+        "description": "Centralize documents and resources in one place, whether it's onboarding materials, company policies, or official processes. A knowledge management solution for businesses to create, organize, and share up-to-date information company-wide.",
+        "image": "https://i.ibb.co.com/SDSgBbG/wiki.jpg"
       },
       {
         "label": "Forms",
-        "icon": "https://i.ibb.co.com/J23sGC5/forms.png"
+        "icon": "https://i.ibb.co.com/J23sGC5/forms.png",
+        "title": "Get and analyze information with surveys and questionnaires",
+        "description": "Create intuitive and powerful forms in seconds with an easy-to-use form builder. With 20+ answer fields, customize your fields and even set conditions for showing questions. Personalize the layout, themes, and generate QR codes in one click for respondents to easily scan and fill.",
+        "image": "https://i.ibb.co.com/Bjh1Lp4/forms.jpg"
       },
       {
         "label": "Approval",
-        "icon": "https://i.ibb.co.com/9TzsFGc/approvall.png"
+        "icon": "https://i.ibb.co.com/9TzsFGc/approvall.png",
+        "title": "Manage all business approval requests in one place",
+        "description": "From finance budgeting requests, events, or paid leaves, create custom approval workflows that route requests to the right person. Submit and process all types of approvals on a single platform. Approve requests with one click, even on the go.",
+        "image": "https://i.ibb.co.com/Ws8MgT1/approval.jpg"
       },
       {
         "label": "Minutes",
-        "icon": "https://i.ibb.co.com/hZQS2ZH/minutes.jpg"
+        "icon": "https://i.ibb.co.com/hZQS2ZH/minutes.jpg",
+        "title": "Focus on conversations, not notetaking",
+        "description": "Automatically transcribe video meetings into transcripts that you can view, search, and comment on. Catch up async with a breeze, even when you can't make a meeting.",
+        "image": "https://i.ibb.co.com/R0Q7C84/minutes.jpg"
+      },
+      {
+        "label": "OKR",
+        "icon": "https://i.ibb.co.com/tY35PZj/okr.jpg",
+        "title": "Set goals and align OKR's",
+        "description": "Turn strategy into measurable results. Create OKR's to drive organizational focus and alignment on individual and team goals. Track your team's performance through OKR real-time data dashboards",
+        "image": "https://i.ibb.co.com/qjSR8qL/okr.jpg"
       },
       {
         "label": "Calender",
-        "icon": "https://i.ibb.co.com/NmPfYqv/calender.jpg"
+        "icon": "https://i.ibb.co.com/NmPfYqv/calender.jpg",
+        "title": "Keep track of all meetings",
+        "description": "Schedule meetings in one click right within chat by viewing all attendee's side-by-side without worrying about time zones. Invite groups or create a group from a meeting invite. ",
+        "image": "https://i.ibb.co.com/K7Nx3ML/calender.jpg"
       }
     ]
 }

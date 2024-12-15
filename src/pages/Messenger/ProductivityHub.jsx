@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 
-const BusinessForm = () => {
+const ProductivityHub = () => {
   // State to track the active tab
-  const [activeTab, setActiveTab] = useState("List View");
+  const [activeTab, setActiveTab] = useState("Email Share");
 
   // Images for each view
   const images = {
-    "List View": [
-      "https://i.ibb.co.com/DG5h3WL/listview.png",
+    "Email Share": [
+      "https://i.ibb.co.com/Vp3xSdZ/messenger4.jpg",
     ],
-    "Kanban View": [
-      "https://i.ibb.co.com/cyfYsRc/kanbanview.png",
+    "Calender Scheduling": [
+      "https://i.ibb.co.com/hyBzRgt/messenger7.jpg",
     ],
-    "Gantt View": [
-      "https://i.ibb.co.com/6gQrW5J/ganttview.png",
+    "Task": [
+      "https://i.ibb.co.com/BqLqJ24/messenger5.jpg",
     ],
-    "Gallery View": [
-      "https://i.ibb.co.com/2ZHwsMn/galleryview.png",
+    "Approval": [
+      "https://i.ibb.co.com/34w6Q6h/messenger6.jpg",
     ],
   };
 
@@ -40,17 +40,18 @@ const BusinessForm = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center py-8">
       {/* Header */}
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 mt-6">
-        Understand your business from all angles
+      <h1 className="text-4xl font-bold text-gray-800 mb-2">
+      Turn chats to productivity hubs
       </h1>
+      <p className="text-gray-600 mb-8">Chat connects with everything. Share, schedule, meet, assign, and approve without leaving your chat feed.</p>
 
       {/* Tabs */}
-      <div className="flex space-x-4 mb-6">
+      <div className="flex space-x-4 mb-2">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`text-purple-700 font-medium text-2xl ${
+            className={`text-blue-700 font-medium text-2xl ${
               activeTab === tab ? "underline" : "hover:underline"
             }`}
           >
@@ -60,17 +61,17 @@ const BusinessForm = () => {
       </div>
 
       {/* Image Section Centered */}
-      <div className="bg-purple-200 rounded-xl p-6 flex justify-center items-center w-3/4 h-full">
+      <div className="rounded-2xl p-6 flex justify-center items-center w-3/4 h-full">
         <div className="grid grid-cols-1 gap-8">
           {images[activeTab].map((image, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow p-4 text-center"
+              className="bg-white rounded-xl p-4 text-center"
             >
               <img
                 src={image}
                 alt={`${activeTab} ${index + 1}`}
-                className="rounded w-[800px] h-[400px] object-cover mb-4"
+                className="rounded-xl w-[1100px] h-[500px] object-cover mb-4"
               />
             </div>
           ))}
@@ -85,4 +86,4 @@ const BusinessForm = () => {
   );
 };
 
-export default BusinessForm;
+export default ProductivityHub;

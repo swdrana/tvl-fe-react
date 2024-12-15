@@ -3,6 +3,7 @@ import BusinessForm from "./BusinessForm";
 import BusinessInsights from "./BusinessInsights";
 import FAQ from "./FAQ";
 import FieldOperation from "./FieldOperation";
+import Footer from "./Footer";
 import Import from "./Import";
 import NeccessaryApp from "./NeccessaryApp";
 import NewRealise from "./NewRealise";
@@ -20,6 +21,7 @@ const Base = () => {
        <BusinessForm></BusinessForm>
        <NeccessaryApp></NeccessaryApp>
        <FAQ></FAQ>
+       <Footer></Footer>
        </>
     );
 };

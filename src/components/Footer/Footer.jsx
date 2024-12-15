@@ -130,7 +130,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#1f2329] text-white py-5 px-6">
+    <footer className="bg-black text-white py-5 px-6">
       {/* Top Section */}
       <div className="flex justify-between container mx-auto">
         {/* Get Lark Today Section */}

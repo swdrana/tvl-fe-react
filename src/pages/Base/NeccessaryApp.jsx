@@ -4,7 +4,7 @@ const NeccessaryApp = () => {
   const testimonials = testimonialsData.testimonials;
 
   return (
-    <div className="bg-white min-h-screen font-sans">
+    <div className="bg-white min-h-screen font-sans mt-10">
       {/* Header Section */}
       <header className="text-center py-4">
         <h1 className="text-4xl font-bold text-gray-800">
