@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 const PayLess = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="rounded-lg lg:h-[420px] md:h-96 h-[510px] shadow-md">
       <img
@@ -29,7 +34,7 @@ const PayLess = () => {
           </li>
         </ul>
         <div className="flex justify-center gap-4 mt-4">
-          <button className="md:px-4 flex px-1 gap-2 md:text-xl font-semibold py-2 rounded-full border-[#ffffff33] border-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+          <button onClick={() => navigate("/contactsales")} className="md:px-4 flex px-1 gap-2 md:text-xl font-semibold py-2 rounded-full border-[#ffffff33] border-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
             Book a demo{" "}
             <span className="border-white text-[#3370FF] bg-white border-2 rounded-[100px] px-2">
               →
@@ -44,7 +49,7 @@ const PayLess = () => {
             }}
             className="rounded-full"
           >
-            <button
+            <button onClick={() => navigate("/signup")}
               className="md:text-xl md:px-4 px-1 font-semibold"
               style={{
                 background:

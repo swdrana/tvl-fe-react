@@ -6,6 +6,7 @@ import SignUp from "../pages/Sign/SignUp";
 import Base from "../pages/Base/Base"
 import Messenger from "../pages/Messenger/Messenger";
 import Approval from "../pages/Approval/Approval";
+import ContactSales from "../pages/ContactSales/ContactSales";
 
 const RouteTree = () => {
   return (
@@ -15,6 +16,7 @@ const RouteTree = () => {
       </Route>
       <Route path="/signin" element={<SignIn></SignIn>} />
       <Route path="/signup" element={<SignUp></SignUp>} />
+      <Route path="/contactsales" element={<ContactSales></ContactSales>} />
       <Route path="/base" element={<Main />}>
         <Route index element={<Base></Base>} />
       </Route>

@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 const Pricing = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="py-12 px-6 bg-gray-50">
       <div className="text-center mb-20">
@@ -73,7 +78,7 @@ const Pricing = () => {
               </span>
             </li>
           </ul>
-          <button className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-[#3370FF] font-medium">
+          <button onClick={() => navigate("/signup")} className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-[#3370FF] font-medium">
             Try for free &rarr;
           </button>
         </div>
@@ -143,7 +148,7 @@ const Pricing = () => {
             </li>
           </ul>
           <div className="flex space-x-4">
-            <button className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-white bg-[#3370FF] font-medium">
+            <button onClick={() => navigate("/contactsales")} className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-white bg-[#3370FF] font-medium">
               Contact sales &rarr;
             </button>
             <button className="px-4 py-2 md:block hidden border-2 rounded-3xl border-[#3370FF] text-[#3370FF] font-medium">
@@ -219,7 +224,7 @@ const Pricing = () => {
               </span>
             </li>
           </ul>
-          <button className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-[#3370FF] font-medium">
+          <button onClick={() => navigate("/contactsales")} className="px-4 py-2 border-2 rounded-3xl border-[#3370FF] text-[#3370FF] font-medium">
             Contact sales &rarr;
           </button>
         </div>

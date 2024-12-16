@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: "Wiki", icon: "https://i.ibb.co/vQTrcZn/m-Ru-FNIyra-FZRVq-HNSd1gf-P4izg.jpg" },
     { name: "OKR", icon: "https://i.ibb.co/tY35PZj/okr.jpg" },
   ];
-
   return (
     <div className="fixed top-20 left-0 right-0 flex items-center space-x-6 bg-white shadow-md p-3 z-50">
       {navItems.map((item, index) => (

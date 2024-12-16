@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 export default function NavBar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [menuActive, setMenuActive] = useState(false);
-  const [menuData, setMenuData] = useState({}); // Holds all dropdown data
-  const [hoveredMenu, setHoveredMenu] = useState(null); // Track the currently hovered menu
+  const [menuData, setMenuData] = useState({}); 
+  const [hoveredMenu, setHoveredMenu] = useState(null); 
 
   const navigate = useNavigate();
 
@@ -49,17 +49,17 @@ export default function NavBar() {
   };
 
   const handleMouseEnter = (menu) => {
-    setHoveredMenu(menu); // Track which menu is being hovered
-    setOpenDropdown(menu); // Open the dropdown on hover
+    setHoveredMenu(menu); 
+    setOpenDropdown(menu); 
   };
 
   const handleMouseLeave = (menu) => {
-    setHoveredMenu(null); // Reset the hovered menu
+    setHoveredMenu(null); 
     setTimeout(() => {
       if (hoveredMenu !== menu) {
-        setOpenDropdown(null); // Hide the dropdown only if the menu is no longer hovered
+        setOpenDropdown(null); 
       }
-    }, 200); // Delay to allow the mouse to move to the dropdown
+    }, 200); 
   };
 
   return (
@@ -92,12 +92,12 @@ export default function NavBar() {
             <div
               key={menu}
               className="relative"
-              onMouseEnter={() => handleMouseEnter(menu)} // Expands dropdown on hover
-              onMouseLeave={() => handleMouseLeave(menu)} // Hides dropdown on mouse leave
+              onMouseEnter={() => handleMouseEnter(menu)} 
+              onMouseLeave={() => handleMouseLeave(menu)} 
             >
               <button
                 className="flex items-center hover:text-blue-600 text-l font-semibold"
-                onClick={() => toggleDropdown(menu)} // Expands dropdown on click
+                onClick={() => toggleDropdown(menu)} 
               >
                 {menu}
                 <svg
@@ -116,7 +116,7 @@ export default function NavBar() {
               {openDropdown === menu && menuData[menu] && (
                 <div
                   className="absolute top-14 -ml-56 left-0 w-full bg-white shadow-lg rounded-lg p-4 grid grid-cols-3 gap-4 z-10"
-                  style={{ width: "100vw" }} // Full width of the page
+                  style={{ width: "100vw" }}
                 >
                   {menuData[menu].map((item, index) => (
                     <button
@@ -163,13 +163,13 @@ export default function NavBar() {
           >
             Log in
           </button>
-          <button className="tablet-only text-l font-semibold rounded-full border border-blue-600 px-4 py-1 text-blue-600 hover:bg-slate-200 h-12">
+          <button onClick={() => navigate("/contactsales")} className="tablet-only text-l font-semibold rounded-full border border-blue-600 px-4 py-1 text-blue-600 hover:bg-slate-200 h-12">
             Contact us
           </button>
           <button className="tablet-only text-l font-semibold rounded-full border border-blue-600 px-4 py-1 text-blue-600 hover:bg-slate-200 h-12">
             Download
           </button>
-          <button className="tablet-only text-l font-semibold rounded-full bg-blue-500 px-4 py-1 text-white hover:bg-blue-700 h-12">
+          <button onClick={() => navigate("/signup")} className="tablet-only text-l font-semibold rounded-full bg-blue-500 px-4 py-1 text-white hover:bg-blue-700 h-12">
             Try for free
           </button>
         </div>

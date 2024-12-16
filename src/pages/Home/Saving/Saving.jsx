@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 const Saving = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="bg-white py-8 px-4 md:px-16 lg:px-24">
       <div className="max-w-6xl flex lg:flex-row flex-col justify-center lg:gap-8 mx-auto lg:items-start text-center">
@@ -10,7 +15,7 @@ const Saving = () => {
           </h2>
           {/* CTA Button */}
           <div className="mt-8">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium text-lg rounded-full shadow-md">
+            <button onClick={() => navigate("/contactsales")} className="px-6 py-3 bg-gradient-to-r from-blue-700 to-sky-400 text-white font-medium text-lg rounded-full shadow-md">
               Book a demo
             </button>
           </div>

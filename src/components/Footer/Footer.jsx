@@ -1,6 +1,10 @@
 import { LinkedIn, Instagram, YouTube } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+
+  const navigate = useNavigate();
+  
   const footerData = [
     {
       title: "Product",
@@ -137,7 +141,7 @@ const Footer = () => {
         <div className="col-span-2 sm:col-span-1">
           <h4 className="font-bold text-lg mb-4">Get Lark today</h4>
           <div className="flex flex-col gap-[10px]">
-            <button className="bg-white font-semibold text-[#3370FF] border border-[#3370FF] px-6 py-2 rounded-[30px] text-[18px] w-full sm:w-auto">
+            <button onClick={() => navigate("/contactsales")} className="bg-white font-semibold text-[#3370FF] border border-[#3370FF] px-6 py-2 rounded-[30px] text-[18px] w-full sm:w-auto">
               Contact us
             </button>
             <button className="bg-[#3370FF] text-white px-5 py-2 rounded-[30px] font-semibold text-[18px] w-full sm:w-auto">

@@ -2,9 +2,12 @@ import { useEffect, useRef } from "react";
 import { MdInsights } from "react-icons/md";
 import { TbFocus2 } from "react-icons/tb";
 import { RiTodoLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Productivity = () => {
-  // Custom Hook to autoplay video when in view
+  
+  const navigate = useNavigate();
+
   const useAutoPlayVideo = () => {
     const videoRef = useRef(null);
 
@@ -93,7 +96,7 @@ const Productivity = () => {
 
           {/* "Book a Demo" Button */}
           <div className="mt-8 flex justify-start">
-          <button className="tablet-only text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 ml-14">
+          <button onClick={() => navigate("/contactsales")} className="tablet-only text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 ml-14">
   Book a demo
 </button>
           </div>

@@ -1,8 +1,12 @@
 import { useState } from "react";
 import testimonialsData from "../FakeData/Platform.json";
 import { FaTv } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const AllPlatform = () => {
+
+  const navigate = useNavigate();
+
   const { testimonials } = testimonialsData;
 
   // State to track the currently selected testimonial
@@ -59,7 +63,7 @@ const AllPlatform = () => {
     <p className="text-gray-600 mb-6">
       {selectedTestimonial.description}
     </p>
-    <button className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+    <button onClick={() => navigate("/signup")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Try for free
     </button>
     <p className="mt-3 text-gray-500 ml-2">REPLACES:</p>

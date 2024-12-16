@@ -13,23 +13,15 @@ const SignUp = () => {
         <button className="text-sm text-gray-700 hover:underline">
           Help Center
         </button>
-        <button className="text-sm text-gray-700 flex items-center space-x-1">
-          <span>English</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+            <select
+              className="border border-gray-300 p-2 rounded bg-white text-gray-700 cursor-pointer"
+              onChange={(e) => alert(`Language changed to: ${e.target.value}`)}
+            >
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+            </select>
       </div>
 
       {/* Left Section */}
