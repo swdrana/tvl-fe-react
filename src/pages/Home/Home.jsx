@@ -1,6 +1,7 @@
 import AccordionCard from "./AccordionCard/AccordionCard";
 import AllPlatform from "./AllPlatform/AllPlatform";
 import Anything from "./Anything/Anything";
+import Banner from "./Banner/Banner";
 import Collaborate from "./Collaborate/Collaborate";
 import Global from "./Global/Global";
 import LarkPerformance from "./LarkPerformance/LarkPerformance";
@@ -14,6 +15,7 @@ import SuperApp from "./SuperApp/SuperApp";
 const Home = () => {
   return (
     <>
+    <Banner></Banner>
     <Collaborate></Collaborate>
     <Productivity></Productivity>
     <Global></Global>

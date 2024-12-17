@@ -55,7 +55,7 @@ const Collaborate = () => {
   };
 
   return (
-    <div className="bg-white pt-32 px-4 lg:px-20">
+    <div className="bg-white pt-8 px-4 lg:px-20">
       {/* Header Section */}
       <div className="text-center mb-10">
         <h1 className="text-xl lg:text-4xl font-semibold mb-4">
