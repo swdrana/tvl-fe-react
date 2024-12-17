@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 function Banner() {
+
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen font-sans bg-gradient-to-b from-slate-50 to-blue-200 text-gray-900">
       {/* Header Section */}
@@ -21,10 +25,10 @@ function Banner() {
         </div>
         {/* Buttons */}
         <div className="flex justify-center mt-6 gap-6">
-          <button className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+          <button onClick={() => navigate("/signup")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
             Try for free
           </button>
-          <a href="#" className="text-blue-600 font-bold hover:underline text-xl mt-2">
+          <a href="#" onClick={() => navigate("/contactsales")} className="text-blue-600 font-bold hover:underline text-xl mt-2">
             Book a demo →
           </a>
         </div>

@@ -1,42 +1,108 @@
-/* Wrapper to clip overflow */
-.logos-wrapper {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
+/* Scoped styles for SuperApp section */
+.superapp-header {
+  text-align: center;
+  background: linear-gradient(to bottom, #f7fafc, #ffffff);
+  padding: 3rem 1rem;
+}
+
+.superapp-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a202c;
+}
+
+.superapp-header span {
+  color: #2563eb;
+}
+
+.superapp-header p {
+  color: #6b7280;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.superapp-header button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 9999px;
+  transition: background 0.3s ease;
+}
+
+.superapp-header button:hover {
+  background: #2563eb;
+}
+
+/* Scoped scrolling logos */
+.superapp-logos-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.superapp-logos-container {
+  display: inline-flex;
+  animation: superapp-scroll 20s linear infinite;
+}
+
+.superapp-logo {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+  filter: grayscale(100%); /* Default grayscale */
+  transition: filter 0.3s ease;
+}
+
+.superapp-logo:hover {
+  filter: grayscale(0%); /* Color on hover */
+}
+
+@keyframes superapp-scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Container for logos */
-  .logos-container {
-    display: inline-flex;
-    animation: scroll 20s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  /* Individual logos */
-  .logo {
-    width: 100px;
-    height: auto;
-    margin: 0 20px;
-  }
-  
-  /* Keyframes for infinite scrolling animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  /* Hover Effect */
-  .logo:hover {
-    filter: grayscale(0%);
-    transition: filter 0.3s;
-  }
-  
-  .logo {
-    filter: grayscale(100%);
-    transition: filter 0.3s;
-  }
-  
+}
+
+/* Central Comparison Section */
+.superapp-comparison-section {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.superapp-comparison-card {
+  background: linear-gradient(to top, #f9fafb, transparent);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  pointer-events: auto;
+}
+
+.superapp-comparison-card img {
+  height: 3rem;
+  margin: 0.5rem 0;
+}
+
+.superapp-comparison-card a {
+  color: #2563eb;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.superapp-comparison-card a:hover {
+  text-decoration: underline;
+}

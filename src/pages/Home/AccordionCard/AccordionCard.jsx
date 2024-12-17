@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AccordionCard = () => {
-  // Initialize the first section as open by default
+
+  const navigate = useNavigate();
+  
   const [openSection, setOpenSection] = useState(0);
 
   // Function to toggle sections (allow only one open at a time)
@@ -76,7 +79,7 @@ const AccordionCard = () => {
             <p className="text-[#646a73] text-[18px] mb-4">
               Get dedicated support to make Lark work for you.
             </p>
-            <button className="px-4 py-2 border-2 rounded-3xl border-black border-opacity-25 font-medium">
+            <button onClick={() => navigate("/contactsales")} className="px-4 py-2 border-2 rounded-3xl border-black border-opacity-25 font-medium">
               Book a demo &rarr;
             </button>
           </div>
