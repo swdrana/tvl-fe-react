@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 
 const Customization = () => {
+
+  const navigate = useNavigate();
     return (
         <div className="bg-white py-12 px-6 md:px-12 lg:px-24">
              <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -12,7 +15,7 @@ const Customization = () => {
                  <p className="text-gray-500 mt-4 font-semibold">
                  Customize your approval process design that suits the needs of your business.
                  </p>
-                 <button className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
             Free demo
            </button>
                </div>

@@ -1,4 +1,4 @@
-import baseVideo from './assets/basevideo.mp4';
+// import baseVideo from './assets/basevideo.mp4';
 
 const Import = () => {
   return (
@@ -19,18 +19,33 @@ const Import = () => {
 
         {/* Right Side: Video */}
         <div className="mt-8 lg:mt-0 lg:w-1/2">
-          <video
-            src={baseVideo}
-            className="rounded-lg shadow-lg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            aria-label="AI Configuration Video"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "0px",
+      paddingBottom: "63.717%",
+    }}
+  >
+    <iframe
+      allow="fullscreen; autoplay"
+      allowFullScreen
+      height="100%"
+      src="https://streamable.com/e/425auf?autoplay=1"
+      width="100%"
+      style={{
+        border: "none",
+        width: "100%",
+        height: "100%",
+        position: "absolute",
+        left: "0px",
+        top: "0px",
+        overflow: "hidden",
+      }}
+    ></iframe>
+  </div>
+</div>
+
       </div>
     </div>
   );

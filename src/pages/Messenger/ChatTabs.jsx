@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 const ChatTabs = () => {
+
+  const navigate = useNavigate();
+  
     return (
         <div className="bg-white py-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-x-8">
@@ -21,7 +25,7 @@ const ChatTabs = () => {
             <p className="text-gray-500 mt-4 font-semibold text-lg">
             Instantly get must-know context when entering a group. Create threads for focused discussion without flooding the group feed.
             </p>
-            <button className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

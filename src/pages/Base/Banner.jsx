@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+
+  const navigate = useNavigate();
+  
   return (
     <div className="bg-purple-200 min-h-screen flex flex-col items-center p-8 mt-20">
       {/* Header Section */}
@@ -19,10 +23,10 @@ const Banner = () => {
       </header>
       {/* Buttons */}
       <div className="flex gap-4 mb-12">
-        <button className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-full shadow hover:bg-blue-700">
+        <button onClick={() => navigate("/signup")} className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-full shadow hover:bg-blue-700">
           Create Base for unified workflows
         </button>
-        <button className=" text-blue-600 border border-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-50">
+        <button onClick={() => navigate("/contactsales")} className=" text-blue-600 border border-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-50">
           Schedule demo
         </button>
       </div>

@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BusinessForm = () => {
+
+  const navigate = useNavigate();
+  
   // State to track the active tab
   const [activeTab, setActiveTab] = useState("List View");
 
@@ -77,8 +81,7 @@ const BusinessForm = () => {
         </div>
       </div>
 
-      {/* Learn How Button */}
-      <button className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
         Learn how
       </button>
     </div>

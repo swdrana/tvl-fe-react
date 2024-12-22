@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 const FieldOperation = () => {
+
+  const navigate = useNavigate();
+  
     return (
       <div className="bg-white py-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-x-8">
@@ -20,7 +25,7 @@ const FieldOperation = () => {
             <p className="text-gray-500 mt-4 font-semibold">
             Inventory tracking, repair request, site selection, you name it. Report and resolve frontline needs in a few taps on a form.
             </p>
-            <button className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-6 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+            <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-6 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
       Free demo
     </button>
           </div>

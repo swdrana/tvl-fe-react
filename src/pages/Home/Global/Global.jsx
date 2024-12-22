@@ -59,7 +59,6 @@ const Global = () => {
 
       {/* Trusted Companies Section */}
       <div className="py-12">
-        {/* Trusted Companies Text */}
         <div className="text-gray-600 text-center mb-8">
           <p>Trusted by fast-growing companies from 125+ countries</p>
         </div>

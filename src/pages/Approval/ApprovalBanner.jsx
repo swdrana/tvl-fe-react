@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const ApprovalBanner = () => {
+
+  const navigate = useNavigate;
     return (
       <div className="bg-orange-100 min-h-screen flex items-center justify-center mt-28">
         {/* Main Content Container */}
@@ -8,7 +12,7 @@ const ApprovalBanner = () => {
             <div className="flex gap-2 items-center">
               <img
                 src="https://i.ibb.co.com/9TzsFGc/approvall.png"
-                alt="Messenger Logo"
+                alt="approval Logo"
                 className="h-7 w-7"
               />
               <p className="font-semibold text-gray-800">Approval</p>
@@ -20,10 +24,10 @@ const ApprovalBanner = () => {
             Submit and process all types of approvals on a single platform. Actionable approval center for making fast business decisions. Approve requests with one click, even on the go.
             </p>
             <div className="space-x-4 flex">
-              <button className="bg-blue-500 font-semibold text-white h-12 w-56 rounded-full hover:bg-blue-700 transition">
+              <button onClick={() => navigate("/signup")} className="bg-blue-500 font-semibold text-white h-12 w-56 rounded-full hover:bg-blue-700 transition">
                 Try for free
               </button>
-              <button className="border border-blue-600 font-semibold text-blue-600 h-12 w-32 rounded-full hover:bg-blue-100 transition">
+              <button onClick={() => navigate("/contactsales")} className="border border-blue-600 font-semibold text-blue-600 h-12 w-32 rounded-full hover:bg-blue-100 transition">
                 Contact us
               </button>
             </div>

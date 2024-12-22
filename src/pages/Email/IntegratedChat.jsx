@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-const Templates = () => {
+const IntegratedChat = () => {
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   
     return (
         <div className="bg-white py-12 px-6 md:px-12 lg:px-24">
@@ -10,7 +10,7 @@ const Templates = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/W0gPYQ3/approval1.jpg"
+              src="https://i.ibb.co.com/W2TGqrK/email3.jpg"
               alt="AI Configuration"
               className="rounded-xl shadow-lg"
             />
@@ -18,12 +18,12 @@ const Templates = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-orange-500 font-bold text-xl">Templates</p>
+            <p className="text-yellow-500 font-bold text-xl">Integrated with Chat</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
-            Out-of-the-box approval flows
+            Share email to chat
             </h1>
             <p className="text-gray-500 mt-4 font-semibold text-lg">
-            Choose from hundreds of ready-to-use templates.
+            Share emails to chat to allow multi-channel collaboration across internal and external communications.
             </p>
             <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
@@ -34,4 +34,4 @@ const Templates = () => {
     );
 };
 
-export default Templates;
+export default IntegratedChat;

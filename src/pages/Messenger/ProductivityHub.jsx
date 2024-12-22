@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductivityHub = () => {
-  // State to track the active tab
+  
+  const navigate = useNavigate;
+  
   const [activeTab, setActiveTab] = useState("Email Share");
 
   // Images for each view
@@ -28,12 +31,11 @@ const ProductivityHub = () => {
     const interval = setInterval(() => {
       setActiveTab((prevTab) => {
         const currentIndex = tabs.indexOf(prevTab);
-        const nextIndex = (currentIndex + 1) % tabs.length; // Cycle through tabs
+        const nextIndex = (currentIndex + 1) % tabs.length; 
         return tabs[nextIndex];
       });
-    }, 5000); // Change every 5 seconds
-
-    // Cleanup the interval when component is unmounted
+    }, 5000); 
+    
     return () => clearInterval(interval);
   }, [tabs]);
 
@@ -79,7 +81,7 @@ const ProductivityHub = () => {
       </div>
 
       {/* Learn How Button */}
-      <button className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
         Learn how
       </button>
     </div>

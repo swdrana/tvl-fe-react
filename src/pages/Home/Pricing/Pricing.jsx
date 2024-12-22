@@ -230,7 +230,7 @@ const Pricing = () => {
         </div>
       </div>
       <div className="flex justify-center mt-12">
-        <button className="font-medium rounded-full border border-blue-500 px-4 py-2 text-blue-600 hover:bg-slate-300">
+        <button onClick={() => navigate("/plans")} className="font-medium rounded-full border border-blue-500 px-4 py-2 text-blue-600 hover:bg-slate-300">
           Compare different plans
         </button>
       </div>

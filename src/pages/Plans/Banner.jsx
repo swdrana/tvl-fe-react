@@ -1,6 +1,10 @@
 import jsonData from '../Home/FakeData/Platform.json';
+import { useNavigate } from "react-router-dom";
 
 const FrontlineFooter = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="flex justify-between items-center p-14 bg-gradient-to-r from-orange-50 to-blue-50 rounded-lg shadow-md mt-12">
       {/* Left Side */}
@@ -20,7 +24,7 @@ const FrontlineFooter = () => {
       </div>
 
       {/* Right Side */}
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md">
+      <button onClick={() => navigate("/contactsales")} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md">
         Contact us
       </button>
     </div>
@@ -28,6 +32,9 @@ const FrontlineFooter = () => {
 };
 
 const App = () => {
+  
+  const navigate = useNavigate();
+
   const testimonials = jsonData.testimonials;
 
   return (
@@ -75,7 +82,7 @@ const App = () => {
               $0<span className="text-base font-bold"> /month</span>
             </p>
             <p className="text-sm text-gray-500 font-semibold mb-6">Up to 50 users</p>
-            <button className="w-full bg-white font-bold text-blue-600 py-3 border border-blue-600 rounded-full hover:bg-slate-200">
+            <button onClick={() => navigate("/signup")} className="w-full bg-white font-bold text-blue-600 py-3 border border-blue-600 rounded-full hover:bg-slate-200">
               Try for free
             </button>
             <ul className="text-left text-gray-600 font-semibold mt-6 space-y-2">
@@ -104,7 +111,7 @@ const App = () => {
             </p>
             <p className="text-sm text-gray-500 mb-6 font-semibold">Up to 500 users</p>
             <div className="flex gap-2">
-              <button className="w-full bg-blue-500 font-bold text-white py-3 rounded-full hover:bg-blue-600">
+              <button onClick={() => navigate("/contactsales")} className="w-full bg-blue-500 font-bold text-white py-3 rounded-full hover:bg-blue-600">
                 Contact Sales
               </button>
               <button className="w-full border font-bold border-blue-500 text-blue-500 py-2 rounded-full hover:bg-blue-50">
@@ -130,7 +137,7 @@ const App = () => {
             </p>
             <p className="text-3xl font-bold mb-2">Let's Talk</p>
             <p className="text-sm text-gray-500 mb-6 font-semibold">Unlimited users</p>
-            <button className="w-full bg-blue-500 font-bold text-white py-3 rounded-full hover:bg-blue-600">
+            <button onClick={() => navigate("/contactsales")} className="w-full bg-blue-500 font-bold text-white py-3 rounded-full hover:bg-blue-600">
               Contact Sales
             </button>
             <ul className="text-left text-gray-600 mt-6 font-semibold space-y-2">

@@ -1,4 +1,7 @@
+import AllPlans from "./AllPlans";
 import Banner from "./Banner";
+import FAQ from "./FAQ";
+import Footer from "./Footer";
 import Savings from "./Savings";
 
 const Plans = () => {
@@ -6,6 +9,9 @@ const Plans = () => {
         <>
         <Banner></Banner>
         <Savings></Savings>
+        <AllPlans></AllPlans>
+        <FAQ></FAQ>
+        <Footer></Footer>
         </>
     );
 };

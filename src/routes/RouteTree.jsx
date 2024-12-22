@@ -8,6 +8,9 @@ import Messenger from "../pages/Messenger/Messenger";
 import Approval from "../pages/Approval/Approval";
 import ContactSales from "../pages/ContactSales/ContactSales";
 import Plans from "../pages/Plans/Plans";
+import Email from "../pages/Email/Email";
+import Docs from "../pages/Docs/Docs";
+import Slides from "../pages/Slides/Slides";
 
 const RouteTree = () => {
   return (
@@ -29,6 +32,15 @@ const RouteTree = () => {
       </Route>
       <Route path="/plans" element={<Main />}>
         <Route index element={<Plans></Plans>} />
+      </Route>
+      <Route path="/email" element={<Main />}>
+        <Route index element={<Email></Email>} />
+      </Route>
+      <Route path="/docs" element={<Main />}>
+        <Route index element={<Docs></Docs>} />
+      </Route>
+      <Route path="/slides" element={<Main />}>
+        <Route index element={<Slides></Slides>} />
       </Route>
     </Routes>
   );

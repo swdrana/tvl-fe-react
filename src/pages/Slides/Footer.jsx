@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   
     return (
       <div className="bg-black text-white py-12 px-6 text-center relative border-b-2 border-b-gray-600">
