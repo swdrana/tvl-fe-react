@@ -11,6 +11,9 @@ import Plans from "../pages/Plans/Plans";
 import Email from "../pages/Email/Email";
 import Docs from "../pages/Docs/Docs";
 import Slides from "../pages/Slides/Slides";
+import Template1 from "../pages/Slides/Templates/Template1";
+import Meetings from "../pages/Meetings/Meetings";
+import Minutes from "../pages/Minutes/Minutes";
 
 const RouteTree = () => {
   return (
@@ -20,6 +23,7 @@ const RouteTree = () => {
       </Route>
       <Route path="/signin" element={<SignIn></SignIn>} />
       <Route path="/signup" element={<SignUp></SignUp>} />
+      <Route path="/template1" element={<Template1></Template1>} />
       <Route path="/contactsales" element={<ContactSales></ContactSales>} />
       <Route path="/base" element={<Main />}>
         <Route index element={<Base></Base>} />
@@ -41,6 +45,12 @@ const RouteTree = () => {
       </Route>
       <Route path="/slides" element={<Main />}>
         <Route index element={<Slides></Slides>} />
+      </Route>
+      <Route path="/meetings" element={<Main />}>
+        <Route index element={<Meetings></Meetings>} />
+      </Route>
+      <Route path="/minutes" element={<Main />}>
+        <Route index element={<Minutes></Minutes>} />
       </Route>
     </Routes>
   );

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const IntegratedChat = () => {
+const AutoTranslation = () => {
 
   const navigate = useNavigate();
   
@@ -10,7 +10,7 @@ const IntegratedChat = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/0X3YHpy/approval3.jpg"
+              src="https://i.ibb.co.com/mGKP4Wb/meeting3.jpg"
               alt="AI Configuration"
               className="rounded-xl shadow-lg"
             />
@@ -18,13 +18,14 @@ const IntegratedChat = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-orange-500 font-bold text-xl">Integrated with Chat</p>
+            <p className="text-cyan-500 font-bold text-xl">Real-time Auto Translation</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
-            Create an approval group to speed up the process
+            Communicate without language barriers
             </h1>
             <p className="text-gray-500 mt-4 font-semibold text-lg">
-            Need more context? Pull everyone on the approval chain into a group chat with one click to talk it out before moving ahead.
+            Lark Meetings support subtitles that can be translated in real-time. Employees from different backgrounds can freely express themselves in their native language. Every voice can be heard, no matter where you are from.
             </p>
+            <i className="text-gray-400 mt-4">*Live subtitle currently supports English, Chinese, and Japanese</i>
             <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
@@ -34,4 +35,4 @@ const IntegratedChat = () => {
     );
 };
 
-export default IntegratedChat;
+export default AutoTranslation;

@@ -1,4 +1,6 @@
-import AllApps from "./AllApps";
+
+import AllApps from "../Approval/AllApps";
+import Navbar from "../Approval/Navbar";
 import Client from "./Client";
 import Collaboration from "./Collaboration";
 import EmailBanner from "./EmailBanner";
@@ -6,7 +8,6 @@ import FAQ from "./FAQ";
 import Footer from "./Footer";
 import IntegratedChat from "./IntegratedChat";
 import Migration from "./Migration";
-import Navbar from "./Navbar";
 
 const Email = () => {
     return (

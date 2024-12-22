@@ -1,7 +1,7 @@
+import Footer from "../Approval/Footer";
 import Banner from "./Banner";
 import Collaboration from "./Collaboration";
 import Content from "./Content";
-import Footer from "./Footer";
 import Integration from "./Integration";
 import Template from "./Template";
 

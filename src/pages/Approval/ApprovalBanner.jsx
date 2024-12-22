@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const ApprovalBanner = () => {
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
     return (
       <div className="bg-orange-100 min-h-screen flex items-center justify-center mt-28">
         {/* Main Content Container */}

@@ -1,4 +1,5 @@
-import AllApps from "./AllApps";
+
+import AllApps from "../Approval/AllApps";
 import Banner from "./Banner";
 import FAQ from "./FAQ";
 import FileManagement from "./FileManagement";

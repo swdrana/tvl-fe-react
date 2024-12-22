@@ -4,7 +4,7 @@ const Template = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-6">
+    <div onClick={() => navigate("/template1")} className="min-h-screen flex flex-col items-center p-6 cursor-pointer">
       {/* Header */}
       <h1 className="text-4xl font-semibold text-gray-800 mb-6 text-center">
         Select the perfect template <br /> and jumpstart your project today

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const IntegratedChat = () => {
+const Collaboration = () => {
 
   const navigate = useNavigate();
   
@@ -10,7 +10,7 @@ const IntegratedChat = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/0X3YHpy/approval3.jpg"
+              src="https://i.ibb.co.com/Q9hSG2t/meeting1.jpg"
               alt="AI Configuration"
               className="rounded-xl shadow-lg"
             />
@@ -18,12 +18,12 @@ const IntegratedChat = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-orange-500 font-bold text-xl">Integrated with Chat</p>
+            <p className="text-cyan-500 font-bold text-xl">Magic Share</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
-            Create an approval group to speed up the process
+            Real-time collaboration anywhere, on any device
             </h1>
             <p className="text-gray-500 mt-4 font-semibold text-lg">
-            Need more context? Pull everyone on the approval chain into a group chat with one click to talk it out before moving ahead.
+            Share a live doc, not just your screen. Everyone can scroll at their own pace and edit together without leaving the video call window—even on the go.
             </p>
             <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
@@ -34,4 +34,4 @@ const IntegratedChat = () => {
     );
 };
 
-export default IntegratedChat;
+export default Collaboration;

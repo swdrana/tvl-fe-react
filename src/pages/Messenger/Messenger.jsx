@@ -1,9 +1,9 @@
+import Navbar from "../Approval/Navbar";
 import ChatTabs from "./ChatTabs";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Formatting from "./Formatting";
 import MessengerBanner from "./MessengerBanner";
-import Navbar from "./Navbar";
 import ProductivityHub from "./ProductivityHub";
 import Translation from "./Translation";
 
