@@ -20,7 +20,7 @@ const MeetingBanner = () => {
             <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-3">
             Turn meetings into true collaborative experiences
             </h1>
-            <p className="text-gray-500 mb-6 max-w-md font-semibold">
+            <p className="text-gray-600 mb-6 max-w-md font-semibold">
             Powerful in-call doc sharing, smart meeting minutes, and mobile-optimized features allow you to get more done together from anywhere, anytime.
             </p>
             <div className="space-x-4 flex">

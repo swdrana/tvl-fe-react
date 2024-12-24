@@ -14,7 +14,7 @@ const Navbar = () => {
     ];
   
     return (
-      <div className="fixed top-20 left-0 right-0 flex items-center space-x-6 bg-white shadow-md p-3 z-50">
+      <div className="fixed top-16 left-0 right-0 flex items-center space-x-6 bg-white shadow-md p-3 z-50">
         {navItems.map((item, index) => (
           <div key={index} className="ml-6 relative flex items-center cursor-pointer hover:bg-gray-100 rounded-lg p-2">
             <div className="flex gap-2 items-center">

@@ -4,7 +4,7 @@ const MinutesBanner = () => {
 
   const navigate = useNavigate();
     return (
-      <div className="bg-violet-200 min-h-screen flex items-center justify-center mt-28">
+      <div className="bg-purple-200 min-h-screen flex items-center justify-center mt-28">
         {/* Main Content Container */}
         <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 px-4">
           {/* Text Section */}
@@ -20,7 +20,7 @@ const MinutesBanner = () => {
             <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-3">
             Focus on engaging, not note-taking
             </h1>
-            <p className="text-gray-500 mb-6 max-w-md font-semibold">
+            <p className="text-gray-600 mb-6 max-w-md font-semibold">
             Lark Minutes automatically transcribes video meetings into transcripts that you can view, search, and collaborate on. Catch up async with a breeze, even when you can't make a meeting.
             </p>
             <div className="space-x-4 flex">

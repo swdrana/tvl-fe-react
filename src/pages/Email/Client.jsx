@@ -16,14 +16,14 @@ const Client = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-yellow-500 font-bold text-xl">Email Client</p>
+            <p className="text-yellow-600 font-bold text-xl">Email Client</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
             Migrate and sync from Gmail to Lark Mail
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold text-lg">
+            <p className="text-gray-600 mt-4 font-semibold text-lg">
             Link your Gmail account to Lark to enjoy the seamless integration between email, messenger, and drive — delivered by Lark Mail.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

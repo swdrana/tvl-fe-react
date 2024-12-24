@@ -1,0 +1,9 @@
+:root {
+    --primary-text-color: #2d2c2c;
+    --secondary-text-color: #514f4f;
+    /* Gradient for the button */
+    --button-gradient: linear-gradient(to right, #2e08c8, #8a7bfe);
+    --button-color: #5717eb;
+    --font-size-lg: 1.25rem;
+    --font-size-sm: 0.875rem;
+}

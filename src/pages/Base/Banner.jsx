@@ -5,7 +5,7 @@ const Banner = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="bg-purple-200 min-h-screen flex flex-col items-center p-8 mt-20">
+    <div className="bg-purple-100 min-h-screen flex flex-col items-center p-8 mt-16">
       {/* Header Section */}
       <div className="flex gap-4">
       <div className="">
@@ -17,7 +17,7 @@ const Banner = () => {
         <h1 className="text-4xl font-bold text-gray-800">
         Plan, execute, track, and <br /> deliver. From frontline <br /> operations to boardroom <br /> projects.
         </h1>
-        <p className=" text-gray-500 font-semibold mt-4">
+        <p className=" text-gray-700 font-semibold mt-4">
         Streamline operational routines, keep track of task <br /> completion, and gain actionable insights instantly to keep <br /> every part of your business in check.
         </p>
       </header>
@@ -30,7 +30,7 @@ const Banner = () => {
           Schedule demo
         </button>
       </div>
-      <p className="text-gray-500 text-xs ml-4">Free forever. No credit card required.</p>
+      <p className="text-gray-600 text-xs ml-4">Free forever. No credit card required.</p>
       </div>
 
 {/* Cards Section */}

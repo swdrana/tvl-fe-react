@@ -22,11 +22,11 @@ const FileManagement = () => {
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
             Organize docs in cloud drive
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold text-lg">
+            <p className="text-gray-600 mt-4 font-semibold text-lg">
             Organize documents in Lark Drive, which supports 200+ file types with cloud storage of 10TB*. Find anything easily and avoid reinventing the wheel.
             </p>
             <p className="text-gray-400 mt-4">*Storage capacity differs for <span className="text-blue-500 cursor-pointer">each plan.</span></p>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

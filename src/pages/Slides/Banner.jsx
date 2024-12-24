@@ -6,7 +6,7 @@ const Banner = () => {
     const navigate = useNavigate();
     
     return (
-        <div className="bg-gradient-to-r from-white to-orange-200 min-h-screen flex items-center justify-center mt-20">
+        <div className="bg-gradient-to-r from-white to-orange-200 min-h-screen flex items-center justify-center mt-16">
         {/* Main Content Container */}
         <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 px-4">
           {/* Text Section */}

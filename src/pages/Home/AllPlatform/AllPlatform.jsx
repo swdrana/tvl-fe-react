@@ -17,13 +17,13 @@ const AllPlatform = () => {
       {/* Header Section */}
       <header className="text-center mt-8 mb-12 px-4">
         <div className="flex items-center justify-center gap-2">
-          <FaTv className="text-blue-500 text-2xl" />
-          <p className="text-blue-500 font-medium text-lg">All-in-one Platform</p>
+          <FaTv className="text-blue-600 text-2xl" />
+          <p className="text-blue-600 font-medium text-lg">All-in-one Platform</p>
         </div>
         <h1 className="text-4xl font-bold leading-tight">
           All the apps you need. In one <span className="text-blue-600">Lark</span>
         </h1>
-        <p className="mt-4 text-gray-500 text-lg max-w-3xl mx-auto">
+        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
           As a global business, Lark helps you connect your team across the world. Lark is for everyone 
           and every role: it is easy to use on a phone, not just at a desk. Schedule messages and 
           cross-timezone meetings with a few clicks, and automate workflows to run a relay race 
@@ -63,7 +63,7 @@ const AllPlatform = () => {
     <p className="text-gray-600 mb-6">
       {selectedTestimonial.description}
     </p>
-    <button onClick={() => navigate("/signup")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+    <button onClick={() => navigate("/signup")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-300 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Try for free
     </button>
     <p className="mt-3 text-gray-500 ml-2">REPLACES:</p>

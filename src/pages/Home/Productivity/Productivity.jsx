@@ -44,7 +44,7 @@ const Productivity = () => {
         <h1 className="text-3xl md:text-4xl font-semibold mb-4">
           The productivity <span className="text-blue-500">Superapp</span> all businesses need
         </h1>
-        <p className="font-semibold md:text-lg text-gray-500 max-w-3xl mx-auto">
+        <p className="font-semibold md:text-lg text-gray-600 max-w-3xl mx-auto">
           Lark digitizes operations from HQ to storefront, streamlines communication, and empowers
           your business with tools for project management, video conferencing, chat, and more!
         </p>
@@ -96,7 +96,7 @@ const Productivity = () => {
 
           {/* "Book a Demo" Button */}
           <div className="mt-8 flex justify-start">
-          <button onClick={() => navigate("/contactsales")} className="tablet-only text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 ml-14">
+          <button onClick={() => navigate("/contactsales")} className="tablet-only text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 ml-20">
   Book a demo
 </button>
           </div>

@@ -54,7 +54,7 @@ const BusinessForm = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`text-purple-700 font-medium text-2xl ${
+            className={`text-purple-600 font-medium text-2xl ${
               activeTab === tab ? "underline" : "hover:underline"
             }`}
           >
@@ -64,7 +64,7 @@ const BusinessForm = () => {
       </div>
 
       {/* Image Section Centered */}
-      <div className="bg-purple-200 rounded-xl p-6 flex justify-center items-center w-3/4 h-full">
+      <div className="bg-purple-100 rounded-xl p-6 flex justify-center items-center w-3/4 h-full">
         <div className="grid grid-cols-1 gap-8">
           {images[activeTab].map((image, index) => (
             <div
@@ -81,7 +81,7 @@ const BusinessForm = () => {
         </div>
       </div>
 
-      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
         Learn how
       </button>
     </div>

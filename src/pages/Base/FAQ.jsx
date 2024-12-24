@@ -56,7 +56,7 @@ const FAQ = () => {
                 <h3 className="underline text-lg font-semibold text-blue-600 cursor-pointer">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mt-2">{item.description}</p>
+                <p className="text-gray-700 mt-2">{item.description}</p>
               </div>
             </div>
           ))}

@@ -17,7 +17,7 @@ const Collaborate = () => {
         'Manage projects and track progress from your phone.',
         'Streamline approval process for purchases, promotions, and more.',
       ],
-      textBgColor: 'bg-violet-100',
+      textBgColor: 'bg-purple-50',
     },
     'Food & Beverage': {
       heading: 'Food & Beverage',
@@ -28,7 +28,7 @@ const Collaborate = () => {
         'Digitalize store opening and closing checklists.',
         'Set up approval workflows for purchase, promotions, and more.',
       ],
-      textBgColor: 'bg-orange-100',
+      textBgColor: 'bg-orange-50',
     },
     Retail: {
       heading: 'Retail',
@@ -39,7 +39,7 @@ const Collaborate = () => {
         'Digitalize store opening and closing, incident reporting, approvals workfows',
         'Get daily insights on sales and revenue on your phone',
       ],
-      textBgColor: 'bg-blue-100',
+      textBgColor: 'bg-blue-50',
     },
     Technology: {
       heading: 'Technology',
@@ -50,7 +50,7 @@ const Collaborate = () => {
         'Manage projects and visualise progress in one-click',
         'Replace multiple tools for chat, video, docs, analytics and more with Lark',
       ],
-      textBgColor: 'bg-gray-100',
+      textBgColor: 'bg-yellow-50',
     },
   };
 
@@ -116,7 +116,7 @@ const Collaborate = () => {
             </h2>
 
             {/* List */}
-            <ul className="space-y-8 text-gray-500 font-semibold text-xl px-4">
+            <ul className="space-y-8 text-gray-600 font-semibold text-xl px-4">
               {tabContent[activeTab].description.map((item, index) => (
                 <li key={index} className="flex items-center space-x-4">
                   <span>{item}</span>
@@ -125,7 +125,7 @@ const Collaborate = () => {
             </ul>
 
             {/* Button */}
-            <button onClick={() => navigate("/contactsales")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+            <button onClick={() => navigate("/contactsales")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
               Book a demo
             </button>
           </div>

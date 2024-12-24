@@ -69,7 +69,7 @@ const ContactSales = () => {
                 {logo.startsWith("http") ? (
                   <img src={logo} alt={`logo-${idx}`} className="h-6 w-10" />
                 ) : (
-                  <span className="text-gray-500 text-sm">{logo}</span>
+                  <span className="text-gray-600 text-sm">{logo}</span>
                 )}
               </div>
             ))}

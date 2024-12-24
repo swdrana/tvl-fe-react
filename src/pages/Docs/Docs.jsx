@@ -6,7 +6,7 @@ import FileManagement from "./FileManagement";
 import Footer from "./Footer";
 import Formats from "./Formats";
 import Migration from "./Migration";
-import Navbar from "./Navbar";
+import Navbar from "../Approval/Navbar"
 
 const Docs = () => {
     return (

@@ -22,10 +22,10 @@ const FieldOperation = () => {
             <h1 className="text-4xl font-bold text-gray-800 mt-2">
             Leave no defects behind.
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold">
+            <p className="text-gray-600 mt-4 font-semibold">
             Inventory tracking, repair request, site selection, you name it. Report and resolve frontline needs in a few taps on a form.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-6 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+            <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-6 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
       Free demo
     </button>
           </div>

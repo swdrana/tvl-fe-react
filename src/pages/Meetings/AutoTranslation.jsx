@@ -22,11 +22,11 @@ const AutoTranslation = () => {
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
             Communicate without language barriers
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold text-lg">
+            <p className="text-gray-600 mt-4 font-semibold text-lg">
             Lark Meetings support subtitles that can be translated in real-time. Employees from different backgrounds can freely express themselves in their native language. Every voice can be heard, no matter where you are from.
             </p>
             <i className="text-gray-400 mt-4">*Live subtitle currently supports English, Chinese, and Japanese</i>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

@@ -8,14 +8,14 @@ const Transcripts = () => {
              <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
                {/* Left Side: Content */}
                <div className="lg:w-1/2 text-center lg:text-left">
-               <p className="text-violet-500 font-bold text-xl">Interactive Transcripts</p>
+               <p className="text-purple-500 font-bold text-xl">Interactive Transcripts</p>
                  <h1 className="text-4xl font-semibold text-gray-800 mt-2">
                  Experience interactive meeting minutes
                  </h1>
-                 <p className="text-gray-500 mt-4 font-semibold">
+                 <p className="text-gray-600 mt-4 font-semibold">
                  Make your voices heard, even when you can't attend meetings: post comments on specific parts, or react with emojis.
                  </p>
-                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
             Free demo
            </button>
                </div>

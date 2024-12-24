@@ -25,7 +25,7 @@ function Banner() {
         </div>
         {/* Buttons */}
         <div className="flex justify-center mt-6 gap-6">
-          <button onClick={() => navigate("/signup")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+          <button onClick={() => navigate("/signup")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
             Try for free
           </button>
           <a href="#" onClick={() => navigate("/contactsales")} className="text-blue-600 font-bold hover:underline text-xl mt-2">

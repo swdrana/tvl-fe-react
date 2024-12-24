@@ -9,14 +9,14 @@ const Collaboration = () => {
              <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
                {/* Left Side: Content */}
                <div className="lg:w-1/2 text-center lg:text-left">
-               <p className="text-yellow-500 font-bold text-xl">Seamless Collaboration</p>
+               <p className="text-yellow-600 font-bold text-xl">Seamless Collaboration</p>
                  <h1 className="text-4xl font-semibold text-gray-800 mt-2">
                  Integrating Email with Chat
                  </h1>
-                 <p className="text-gray-500 mt-4 font-semibold">
+                 <p className="text-gray-600 mt-4 font-semibold">
                  Send announcements to entire chat groups, departments or teams in a breeze.
                  </p>
-                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
             Free demo
            </button>
                </div>

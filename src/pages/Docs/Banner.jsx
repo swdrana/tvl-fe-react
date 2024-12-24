@@ -5,7 +5,7 @@ const Banner = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="bg-blue-200 min-h-screen flex flex-col items-center p-8 mt-32">
+    <div className="bg-blue-100 min-h-screen flex flex-col items-center p-8 mt-32">
       {/* Header Section */}
       <div className="flex gap-4">
       <div className="ml-12 mt-8">
@@ -23,14 +23,14 @@ const Banner = () => {
       </header>
       {/* Buttons */}
       <div className="flex gap-4 mb-12">
-        <button onClick={() => navigate("/signup")} className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-full shadow hover:bg-blue-700">
+        <button onClick={() => navigate("/signup")} className="bg-blue-600 text-white px-6 py-3 font-semibold rounded-full shadow hover:bg-blue-700">
           Experience the future of Docs
         </button>
         <button onClick={() => navigate("/contactsales")} className=" text-blue-600 border border-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-50">
           Schedule demo
         </button>
       </div>
-      <p className="text-gray-500 text-xs ml-4">Free forever. No credit card required.</p>
+      <p className="text-gray-600 text-xs ml-4">Free forever. No credit card required.</p>
       </div>
 
 {/* Cards Section */}

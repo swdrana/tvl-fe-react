@@ -18,14 +18,14 @@ const Collaboration = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-violet-500 font-bold text-xl">Multilingual Collaboration</p>
+            <p className="text-purple-500 font-bold text-xl">Multilingual Collaboration</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
             View meetings in your own language
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold text-lg">
+            <p className="text-gray-600 mt-4 font-semibold text-lg">
             With one click, meeting minutes can be translated from one language to another, facilitating communication for global teams.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

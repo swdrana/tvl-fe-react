@@ -22,10 +22,10 @@ const Collaboration = () => {
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
             Real-time collaboration anywhere, on any device
             </h1>
-            <p className="text-gray-500 mt-4 font-semibold text-lg">
+            <p className="text-gray-600 mt-4 font-semibold text-lg">
             Share a live doc, not just your screen. Everyone can scroll at their own pace and edit together without leaving the video call window—even on the go.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
     </button>
           </div>

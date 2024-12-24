@@ -52,7 +52,7 @@ const NeccessaryApp = () => {
       </section>
 
       <div className="flex justify-center items-center mb-16">
-  <button className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-96">
+  <button className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-96">
     Get Lark Base templates for your use cases
   </button>
 </div>

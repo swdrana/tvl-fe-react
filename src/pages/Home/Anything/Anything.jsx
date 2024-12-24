@@ -6,7 +6,7 @@ const Anything = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-b from-blue-100 to-white min-h-screen py-10 px-5 mb-20">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-10 px-5 mb-20">
       <header className="text-center mb-10 mt-10">
         <div className="flex items-center justify-center space-x-2 mb-4">
           <FaMobileAlt className="text-2xl text-blue-600" />
@@ -23,7 +23,7 @@ const Anything = () => {
           workflows to enhance efficiency.
         </p>
         <button
-          className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-sky-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40"
+          className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40"
           onClick={() => navigate("/signup")}
         >
           Try for free

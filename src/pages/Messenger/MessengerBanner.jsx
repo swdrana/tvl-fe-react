@@ -21,7 +21,7 @@ const MessengerBanner = () => {
             <h1 className="text-4xl font-bold text-gray-800 mb-4 mt-3">
               Get more done in chats
             </h1>
-            <p className="text-gray-500 mb-6 max-w-md font-semibold">
+            <p className="text-gray-600 mb-6 max-w-md font-semibold">
               Connect with teams and take action instantly. Teams, tools, and
               context are all in one chat feed.
             </p>
@@ -33,7 +33,7 @@ const MessengerBanner = () => {
                 Contact us
               </button>
             </div>
-            <p className="text-gray-500 mt-4 text-xs">
+            <p className="text-gray-600 mt-4 text-xs">
               Free forever. No credit card required.
             </p>
           </div>

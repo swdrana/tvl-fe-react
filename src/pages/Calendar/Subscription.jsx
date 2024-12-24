@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const IntegratedChat = () => {
+const Subscription = () => {
 
   const navigate = useNavigate();
   
@@ -10,7 +10,7 @@ const IntegratedChat = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/W2TGqrK/email3.jpg"
+              src="https://i.ibb.co.com/5W01m3J/calendar3.jpg"
               alt="AI Configuration"
               className="rounded-xl shadow-lg"
             />
@@ -18,12 +18,12 @@ const IntegratedChat = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-yellow-600 font-bold text-xl">Integrated with Chat</p>
+            <p className="text-orange-500 font-bold text-xl">Calendar Subscription</p>
             <h1 className="text-4xl font-semibold text-gray-800 mt-2">
-            Share email to chat
+            Save the date
             </h1>
             <p className="text-gray-600 mt-4 font-semibold text-lg">
-            Share emails to chat to allow multi-channel collaboration across internal and external communications.
+            Create or subscribe to public calendars at your company such as editorial schedules, town halls, or app releases, and never miss important events.
             </p>
             <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
       Free demo
@@ -34,4 +34,4 @@ const IntegratedChat = () => {
     );
 };
 
-export default IntegratedChat;
+export default Subscription;

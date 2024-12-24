@@ -15,7 +15,7 @@ const Saving = () => {
           </h2>
           {/* CTA Button */}
           <div className="mt-8">
-            <button onClick={() => navigate("/contactsales")} className="px-6 py-3 bg-gradient-to-r from-blue-700 to-sky-400 text-white font-medium text-lg rounded-full shadow-md">
+            <button onClick={() => navigate("/contactsales")} className="px-6 py-3 bg-gradient-to-r from-blue-700 to-blue-400 text-white font-medium text-lg rounded-full shadow-md">
               Book a demo
             </button>
           </div>
