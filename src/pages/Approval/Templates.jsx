@@ -25,7 +25,7 @@ const Templates = () => {
             <p className="text-gray-600 mt-4 font-semibold text-lg">
             Choose from hundreds of ready-to-use templates.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-1 py-2 text-white h-12 w-40">
       Free demo
     </button>
           </div>

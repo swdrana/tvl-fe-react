@@ -38,7 +38,7 @@ const Productivity = () => {
   const videoRef = useAutoPlayVideo();
 
   return (
-    <div className="bg-gradient-to-r from-slate-100 to-slate-50 min-h-screen flex flex-col items-center justify-center p-6 mt-10">
+    <div className="bg-gradient-to-b from-deep-purple-50 to-white min-h-screen flex flex-col items-center justify-center p-6 mt-10">
       {/* Heading Section */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -96,7 +96,7 @@ const Productivity = () => {
 
           {/* "Book a Demo" Button */}
           <div className="mt-8 flex justify-start">
-          <button onClick={() => navigate("/contactsales")} className="tablet-only text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 ml-20">
+          <button onClick={() => navigate("/contactsales")} className="text-xl font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44 ml-16">
   Book a demo
 </button>
           </div>

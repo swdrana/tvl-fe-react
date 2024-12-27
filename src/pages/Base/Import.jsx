@@ -12,7 +12,7 @@ const Import = () => {
           <p className="text-gray-600 mt-4 font-medium">
           From Excel to Base, transform complex data into <br /> actionable insights simply with one click.
           </p>
-          <button className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-6 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+          <button className="mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-6 py-2 text-white h-12 w-44">
       Import now
     </button>
         </div>

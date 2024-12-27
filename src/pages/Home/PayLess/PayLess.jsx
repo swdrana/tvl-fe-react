@@ -50,13 +50,7 @@ const PayLess = () => {
             className="rounded-full"
           >
             <button onClick={() => navigate("/signup")}
-              className="md:text-xl md:px-4 px-1 font-semibold"
-              style={{
-                background:
-                  "linear-gradient(96deg, var(--token-d5a17d1f-2990-4a9f-b1ca-388c105e73de, rgb(71, 82, 230)) 0%, var(--token-f3e71d39-60d3-470b-86c0-689dedddff26, rgb(36, 196, 255)) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
+              className="text-xl font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44"
             >
               Try for free
             </button>

@@ -15,7 +15,7 @@ const Migration = () => {
                  <p className="text-gray-600 mt-4 font-semibold">
                  Dust off your local Word, Excel, and PDF files by importing them to Lark. Bring all your legacy documents to life, as they become instantly sharable and editable.
                  </p>
-                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-1 py-2 text-white h-12 w-40 text-lg">
             Free demo
            </button>
                </div>

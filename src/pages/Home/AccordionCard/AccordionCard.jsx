@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const AccordionCard = () => {
-
   const navigate = useNavigate();
-  
   const [openSection, setOpenSection] = useState(0);
 
-  // Function to toggle sections (allow only one open at a time)
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
   };
@@ -41,10 +39,22 @@ const AccordionCard = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <motion.div
+      className="container mx-auto"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <div className="p-4 md:p-8 flex flex-col md:flex-row gap-6">
         {/* Left Section: Accordion */}
-        <div className="flex-1">
+        <motion.div
+          className="flex-1"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-[32px] font-semibold mb-4">
             Find the answers that you need
           </h2>
@@ -68,10 +78,16 @@ const AccordionCard = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Section */}
-        <div className="flex-1 md:max-w-sm">
+        <motion.div
+          className="flex-1 md:max-w-sm"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="bg-[#f6f6fb] p-4 rounded-lg mb-4 shadow-sm">
             <h3 className="text-[24px] font-semibold mb-2">
               Book a consultation
@@ -79,7 +95,10 @@ const AccordionCard = () => {
             <p className="text-[#646a73] text-[18px] mb-4">
               Get dedicated support to make Lark work for you.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="px-4 py-2 border-2 rounded-3xl border-black border-opacity-25 font-medium">
+            <button
+              onClick={() => navigate("/contactsales")}
+              className="px-4 py-2 border-2 rounded-3xl border-black border-opacity-25 font-medium"
+            >
               Book a demo &rarr;
             </button>
           </div>
@@ -95,9 +114,9 @@ const AccordionCard = () => {
               Explore Lark Blogs &rarr;
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

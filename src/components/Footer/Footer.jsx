@@ -2,9 +2,8 @@ import { LinkedIn, Instagram, YouTube } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-
   const navigate = useNavigate();
-  
+
   const footerData = [
     {
       title: "Product",
@@ -138,10 +137,13 @@ const Footer = () => {
       {/* Top Section */}
       <div className="flex justify-between container mx-auto">
         {/* Get Lark Today Section */}
-        <div className="col-span-2 sm:col-span-1">
+        <div className="col-span-2 sm:col-span-1 pr-6 border-r border-gray-700">
           <h4 className="font-bold text-lg mb-4">Get Lark today</h4>
           <div className="flex flex-col gap-[10px]">
-            <button onClick={() => navigate("/contactsales")} className="bg-white font-semibold text-[#3370FF] border border-[#3370FF] px-6 py-2 rounded-[30px] text-[18px] w-full sm:w-auto">
+            <button
+              onClick={() => navigate("/contactsales")}
+              className="bg-white font-semibold text-[#3370FF] border border-[#3370FF] px-6 py-2 rounded-[30px] text-[18px] w-full sm:w-auto"
+            >
               Contact us
             </button>
             <button className="bg-[#3370FF] text-white px-5 py-2 rounded-[30px] font-semibold text-[18px] w-full sm:w-auto">
@@ -160,7 +162,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        {/* Content Section */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pl-6">
           {footerData.map((section, index) => (
             <div key={index}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>

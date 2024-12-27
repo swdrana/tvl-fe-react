@@ -15,7 +15,7 @@ const Transcription = () => {
                  <p className="text-gray-600 mt-4 font-semibold">
                  Lark Minutes automatically transcribes video meetings into transcripts that you can view, search, and collaborate on. Catch up async with a breeze, even when you can't join a meeting.
                  </p>
-                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-1 py-2 text-white h-12 w-40 text-lg">
             Free demo
            </button>
                </div>

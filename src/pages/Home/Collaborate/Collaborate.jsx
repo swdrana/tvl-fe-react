@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const Collaborate = () => {
-  
   const navigate = useNavigate();
-
   const [activeTab, setActiveTab] = useState('All Businesses');
 
   const tabContent = {
@@ -55,7 +54,13 @@ const Collaborate = () => {
   };
 
   return (
-    <div className="bg-white pt-8 px-4 lg:px-20">
+    <motion.div
+      className="bg-white pt-8 px-4 lg:px-20"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
+    >
       {/* Header Section */}
       <div className="text-center mb-10">
         <h1 className="text-xl lg:text-4xl font-semibold mb-4">
@@ -90,13 +95,11 @@ const Collaborate = () => {
         <div className="flex flex-col lg:flex-row items-stretch lg:space-x-10 space-y-8 lg:space-y-0 w-full max-w-7xl">
           {/* Left Image Section */}
           <div className="relative flex-1 bg-gray-100 h-full">
-            {/* Background Image */}
             <img
               src={tabContent[activeTab].backgroundImage}
               alt={activeTab}
               className="rounded-2xl h-full w-full object-cover"
             />
-            {/* Overlay Image */}
             <div className="absolute bottom-4 -left-14 p-4 w-80">
               <img
                 className="rounded-xl"
@@ -110,12 +113,9 @@ const Collaborate = () => {
           <div
             className={`flex-1 p-6 rounded-2xl flex flex-col justify-between ${tabContent[activeTab].textBgColor}`}
           >
-            {/* Heading */}
             <h2 className="text-4xl font-semibold mb-4">
               {tabContent[activeTab].heading}
             </h2>
-
-            {/* List */}
             <ul className="space-y-8 text-gray-600 font-semibold text-xl px-4">
               {tabContent[activeTab].description.map((item, index) => (
                 <li key={index} className="flex items-center space-x-4">
@@ -123,15 +123,16 @@ const Collaborate = () => {
                 </li>
               ))}
             </ul>
-
-            {/* Button */}
-            <button onClick={() => navigate("/contactsales")} className="text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+            <button
+              onClick={() => navigate("/contactsales")}
+              className="text-xl font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44"
+            >
               Book a demo
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

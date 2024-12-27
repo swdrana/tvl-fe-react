@@ -15,6 +15,8 @@ import Template1 from "../pages/Slides/Templates/Template1";
 import Meetings from "../pages/Meetings/Meetings";
 import Minutes from "../pages/Minutes/Minutes";
 import Calendar from "../pages/Calendar/Calendar";
+import Rooms from "../pages/Rooms/Rooms";
+import Webinar from "../pages/Webinar/Webinar";
 
 const RouteTree = () => {
   return (
@@ -55,6 +57,12 @@ const RouteTree = () => {
       </Route>
       <Route path="/calendar" element={<Main />}>
         <Route index element={<Calendar></Calendar>} />
+      </Route>
+      <Route path="/rooms" element={<Main />}>
+        <Route index element={<Rooms></Rooms>} />
+      </Route>
+      <Route path="/webinar" element={<Main />}>
+        <Route index element={<Webinar></Webinar>} />
       </Route>
     </Routes>
   );

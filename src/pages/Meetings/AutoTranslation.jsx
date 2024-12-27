@@ -26,7 +26,7 @@ const AutoTranslation = () => {
             Lark Meetings support subtitles that can be translated in real-time. Employees from different backgrounds can freely express themselves in their native language. Every voice can be heard, no matter where you are from.
             </p>
             <i className="text-gray-400 mt-4">*Live subtitle currently supports English, Chinese, and Japanese</i>
-            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40">
+            <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full px-1 py-2 text-white bg-gradient-to-r hover:bg-gradient-hover h-12 w-40">
       Free demo
     </button>
           </div>

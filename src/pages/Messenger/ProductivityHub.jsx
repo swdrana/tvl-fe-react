@@ -81,7 +81,7 @@ const ProductivityHub = () => {
       </div>
 
       {/* Learn How Button */}
-      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-4 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-44">
+      <button onClick={() => navigate("/contactsales")} className="mt-6 text-xl font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44">
         Learn how
       </button>
     </div>

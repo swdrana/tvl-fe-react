@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Plain Colors */
+  --bg-white: #ffffff;
+  --bg-blue: #1e83f6;
+  --text-orange: #f97316;
+  --text-yellow: #f5ee0c;
+  --text-purple: #ee0efe;
+  --text-blue: #2b78fc;
+  --text-cyan: #13c4f5;
+  --text-gray-dark: #1e2835;
+  --text-gray-light: #586270;
+
+  /* Gradient Colors */
+  --btn-blue-start: #2859df;
+  --btn-blue-end: #60b5fa;
+  --btn-blue-hover: #1350f8;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Background */
+.bg-gradient {
+  background: linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end));
+}

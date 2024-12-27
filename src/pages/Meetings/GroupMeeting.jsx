@@ -15,7 +15,7 @@ const GroupMeeting = () => {
                  <p className="text-gray-600 mt-4 font-semibold">
                  Hold interactive online meetings and events with up to 1,000 participants and up to 50 breakout sessions for closed group discussions within a meeting.
                  </p>
-                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r from-blue-700 to-blue-400 px-1 py-2 text-white hover:from-blue-700 hover:to-blue-700 h-12 w-40 text-lg">
+                 <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full px-1 py-2 text-white bg-gradient-to-r hover:bg-gradient-hover h-12 w-40 text-lg">
             Free demo
            </button>
                </div>
