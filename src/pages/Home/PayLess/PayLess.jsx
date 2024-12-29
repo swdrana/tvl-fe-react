@@ -34,23 +34,23 @@ const PayLess = () => {
           </li>
         </ul>
         <div className="flex justify-center gap-4 mt-4">
-          <button onClick={() => navigate("/contactsales")} className="md:px-4 flex px-1 gap-2 md:text-xl font-semibold py-2 rounded-full border-[#ffffff33] border-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+          <button onClick={() => navigate("/contactsales")} className="md:px-4 flex px-1 gap-2 md:text-xl font-semibold py-2 rounded-full border-[#ffffff33] border-4 bg-gradient-to-r hover:bg-gradient-hover text-white mt-4">
             Book a demo{" "}
-            <span className="border-white text-[#3370FF] bg-white border-2 rounded-[100px] px-2">
+            <span className=" text-bluetext bg-white border-1 rounded-[100px] px-2">
               →
             </span>
           </button>
           <div
-            style={{
-              backgroundColor: "white",
-              display: "inline-block",
-              padding: "0.5rem",
-              border: "2px solid rgba(128, 128, 128, 0.4)"
-            }}
-            className="rounded-full"
+            // style={{
+            //   backgroundColor: "white",
+            //   display: "inline-block",
+            //   padding: "0.5rem",
+            //   border: "2px solid rgba(128, 128, 128, 0.4)"
+            // }}
+            className="rounded-full mt-4"
           >
             <button onClick={() => navigate("/signup")}
-              className="text-xl font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44"
+              className="text-xl font-semibold rounded-full bg-blue hover:bg-gradient-hover px-4 py-2 text-white h-12 w-44"
             >
               Try for free
             </button>

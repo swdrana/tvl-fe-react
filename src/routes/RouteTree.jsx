@@ -17,6 +17,8 @@ import Minutes from "../pages/Minutes/Minutes";
 import Calendar from "../pages/Calendar/Calendar";
 import Rooms from "../pages/Rooms/Rooms";
 import Webinar from "../pages/Webinar/Webinar";
+import Wiki from "../pages/Wiki/Wiki";
+import Meegle from "../pages/Meegle/Meegle";
 
 const RouteTree = () => {
   return (
@@ -63,6 +65,12 @@ const RouteTree = () => {
       </Route>
       <Route path="/webinar" element={<Main />}>
         <Route index element={<Webinar></Webinar>} />
+      </Route>
+      <Route path="/wiki" element={<Main />}>
+        <Route index element={<Wiki></Wiki>} />
+      </Route>
+      <Route path="/meegle" element={<Main />}>
+        <Route index element={<Meegle></Meegle>} />
       </Route>
     </Routes>
   );

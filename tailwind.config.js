@@ -16,11 +16,14 @@ module.exports = withMT({
         orange: "var(--text-orange)",
         yellow: "var(--text-yellow)",
         purple: "var(--text-purple)",
-        cyan: "var(--text-cyan)",
         bluetext: "var(--text-blue)",
         gray: {
           dark: "var(--text-gray-dark)",
           light: "var(--text-gray-light)",
+        },
+        cyan: {
+          dark: "var(--text-cyan-dark)",
+          light: "var(--text-cyan-light)",
         },
       },
       backgroundImage: {

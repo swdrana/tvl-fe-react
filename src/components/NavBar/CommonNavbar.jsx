@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
-export default function NavBar() {
+export default function CommonNavbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [menuActive, setMenuActive] = useState(false);
   const [menuData, setMenuData] = useState({});
@@ -73,10 +73,10 @@ export default function NavBar() {
                 className="w-8 h-8"
               />
               <div className="text-left">
-                <Typography variant="h6" className="text-sm font-bold text-blue-600">
+                <Typography variant="h6" className="text-sm font-bold text-bluetext">
                   {item.name}
                 </Typography>
-                <Typography variant="small" className="text-xs text-gray-500">
+                <Typography variant="small" className="text-xs text-gray-light">
                   {item.description}
                 </Typography>
               </div>

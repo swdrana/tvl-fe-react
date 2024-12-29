@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
-import NavBar from "../components/NavBar/NavBar";
+import MeegleNavbar from "../pages/Meegle/MeegleNavbar";
+import CommonNavbar from "../components/NavBar/CommonNavbar";
 
-const Main = () => {
+const Main = ({isNewNavbar}) => {
   return (
     <>
-      <NavBar />
+      {isNewNavbar ? <MeegleNavbar></MeegleNavbar> : <CommonNavbar></CommonNavbar>}
       <Outlet />
       <Footer />
     </>

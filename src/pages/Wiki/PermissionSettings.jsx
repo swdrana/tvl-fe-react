@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Formatting = () => {
+const PermissionSettings = () => {
 
   const navigate = useNavigate();
   
@@ -10,7 +10,7 @@ const Formatting = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/DtzSZVL/messenger3.jpg"
+              src="https://i.ibb.co.com/WyfwnDS/wiki3.jpg"
               alt="AI Configuration"
               className="rounded-xl shadow-lg"
             />
@@ -18,12 +18,12 @@ const Formatting = () => {
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-bluetext font-bold text-xl">Rich Formatting</p>
+            <p className="text-cyan-dark font-bold text-xl">Permission Settings</p>
             <h1 className="text-4xl font-semibold text-gray-dark mt-2">
-            Show, and tell
+            Advanced permission controls
             </h1>
             <p className="text-gray-light mt-4 font-semibold text-lg">
-            Make your point with rich text and annotated screen captures, and applaud with emojis.
+            Configure the permissions to view, edit, copy, print, export at user and department levels to safeguard your knowledge base.
             </p>
             <button onClick={() => navigate("/contactsales")} className="text-lg mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-1 py-2 text-white h-12 w-40">
       Free demo
@@ -34,4 +34,4 @@ const Formatting = () => {
     );
 };
 
-export default Formatting;
+export default PermissionSettings;
