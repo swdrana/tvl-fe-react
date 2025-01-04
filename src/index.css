@@ -5,10 +5,11 @@
 :root {
   /* Plain Colors */
   --bg-white: #ffffff;
-  --bg-blue: #1e83f6;
+  --bg-blue: #0e74e8;
+  --bg-purple: #8c09b4;
   --text-orange: #f97316;
   --text-yellow: #f5ee0c;
-  --text-purple: #ee0efe;
+  --text-purple: #9707b8;
   --text-blue: #2172ff;
   --text-cyan-light: #a8e3f3;
   --text-cyan-dark: #1ec6f5;
@@ -17,13 +18,17 @@
 
   /* Gradient Colors */
   --btn-blue-start: #2859df;
-  --btn-blue-end: #60b5fa;
-  --btn-blue-hover: #1350f8;
+  --btn-blue-end: #4da9f5;
+  --btn-blue-hover: #0844ea;
+  --btn-purple-start: #9707d0;
+  --btn-purple-end: #ba4df5;
+  --btn-purple-hover: #e913f8;
 }
 
 /* Gradient Text */
 .text-gradient {
   background: linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end));
+  background: linear-gradient(to right, var(--btn-purple-start), var(--btn-purple-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -31,4 +36,5 @@
 /* Gradient Background */
 .bg-gradient {
   background: linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end));
+  background: linear-gradient(to right, var(--btn-purple-start), var(--btn-purple-end));
 }

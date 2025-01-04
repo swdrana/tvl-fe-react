@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const FieldOperation = () => {
+const TurnNumbers = () => {
 
   const navigate = useNavigate();
   
@@ -10,29 +10,25 @@ const FieldOperation = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://i.ibb.co.com/X2JXm48/base2.jpg"
+              src="https://i.ibb.co.com/gtGfwrH/form1.jpg"
               alt="AI Configuration"
-              className="rounded-xl shadow-lg"
+              className="rounded-2xl shadow-lg"
             />
           </div>
   
           {/* Right Side: Content */}
           <div className="lg:w-1/2 text-center ml-6 lg:text-left mt-8 lg:mt-0">
-            <p className="text-purple-600 font-bold text-lg">Field operations</p>
             <h1 className="text-4xl font-bold text-gray-dark mt-2">
-            Leave no defects behind.
+            Turn numbers into actions
             </h1>
             <p className="text-gray-light mt-4 font-semibold">
-            Inventory tracking, repair request, site selection, you name it. Report and resolve frontline needs in a few taps on a form.
+            Gather everything right in Lark Base. Share and collaborate on data with your team.
             </p>
-            <button onClick={() => navigate("/contactsales")} className="mt-6 font-semibold rounded-full bg-gradient-to-r hover:bg-gradient-hover px-6 py-2 text-white h-12 w-44">
-      Free demo
-    </button>
           </div>
         </div>
       </div>
     );
   };
   
-  export default FieldOperation;
+  export default TurnNumbers;
   

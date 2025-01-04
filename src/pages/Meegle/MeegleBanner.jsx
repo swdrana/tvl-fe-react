@@ -2,19 +2,19 @@ import React from "react";
 
 const MeegleBanner = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+    <div className="min-h-scree flex flex-col ml-24 mt-20">
       {/* Heading Section */}
       <header className="mb-8 mt-12">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-5xl font-bold text-gray-dark">
           Project Workflows, Visualized
         </h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-2xl text-gray-light">
           Set direction, zoom into details, <span className="text-blue-600">reach milestones</span>, measure success,
           do it all with <span className="font-medium text-blue-600">Meegle</span>
         </p>
 
         {/* Try for Free Button */}
-        <button className="mt-6 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 shadow-lg">
+        <button className="mt-6 bg-gradient-to-p hover:bg-gradient-hover-p text-white py-3 px-6 rounded-full shadow-lg font-semibold text-xl">
           Try for Free →
         </button>
       </header>

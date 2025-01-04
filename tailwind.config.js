@@ -8,14 +8,19 @@ module.exports = withMT({
       colors: {
         white: "var(--bg-white)",
         blue: {
-          DEFAULT: "var(--bg-blue)", 
-          start: "var(--btn-blue-start)", 
-          end: "var(--btn-blue-end)", 
+          DEFAULT: "var(--bg-blue)",
+          start: "var(--btn-blue-start)",
+          end: "var(--btn-blue-end)",
           hover: "var(--btn-blue-hover)",
+        },
+        purple: {
+          DEFAULT: "var(--bg-purple)",
+          start: "var(--btn-purple-start)",
+          end: "var(--btn-purple-end)",
+          hover: "var(--btn-purple-hover)",
         },
         orange: "var(--text-orange)",
         yellow: "var(--text-yellow)",
-        purple: "var(--text-purple)",
         bluetext: "var(--text-blue)",
         gray: {
           dark: "var(--text-gray-dark)",
@@ -30,7 +35,41 @@ module.exports = withMT({
         "gradient-to-r": "linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end))",
         "gradient-hover": "linear-gradient(to right, var(--btn-blue-hover), var(--btn-blue-hover))",
       },
+      animation: {
+        scroll: "scroll 20s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      spacing: {
+        128: "32rem",
+        144: "36rem",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+      boxShadow: {
+        card: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          ".no-scrollbar::-webkit-scrollbar": {
+            display: "none",
+          },
+          ".no-scrollbar": {
+            "-ms-overflow-style": "none",
+            "scrollbar-width": "none",
+          },
+        },
+        ["responsive", "hover"]
+      );
+    },
+  ],
 });

@@ -53,7 +53,7 @@
     "name": "Forms",
     "description": "Intuitive form builder to collect and organize info",
     "icon": "https://i.ibb.co.com/J23sGC5/forms.png",
-    "link": "/forms"
+    "link": "/form"
   },
   {
     "id": "9",
@@ -108,7 +108,7 @@
     "id": "16",
     "name": "AnyCross",
     "description": "Unlock boundless integration potential",
-    "icon": "https://i.ibb.co/bKJDZMs/icon-anycross.png",
+    "icon": "https://i.ibb.co.com/VVRqK5g/anycoss.jpg",
     "link": "/anycross"
   },
   {
@@ -116,6 +116,6 @@
     "name": "Open Platform",
     "description": "Customize Lark with diverse, powerful APIs",
     "icon": "https://i.ibb.co.com/dmHQCpw/oneplatform.png",
-    "link": "/open-platform"
+    "link": "/openplatform"
   }
 ]

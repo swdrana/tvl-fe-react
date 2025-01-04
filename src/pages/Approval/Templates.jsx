@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Templates = () => {
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   
     return (
         <div className="bg-white py-12 px-6 md:px-12 lg:px-24">

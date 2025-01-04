@@ -1,87 +1,183 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MeegleNavbar = () => {
-  const DropdownMenu = ({ title, options }) => {
-    return (
-      <div className="relative group">
-        <button
-          className="text-gray-700 font-medium hover:text-gray-900 focus:outline-none"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          {title}
-        </button>
-        <div
-          className="absolute left-0 hidden w-48 mt-2 bg-white border border-gray-200 shadow-lg rounded-md group-hover:block"
-          role="menu"
-          aria-label={title}
-        >
-          <ul className="py-2">
-            {options.map((option, index) => (
-              <li
-                key={index}
-                className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
-                role="menuitem"
-              >
-                {option}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
-      {/* Logo Section */}
-      <div className="flex items-center space-x-2">
-        <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-        <span className="text-lg font-bold text-black">Meegle</span>
-      </div>
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+         <img src="https://i.ibb.co.com/yY6vv60/meegle.png" alt="" className="w-6"/>
+          <span className="text-lg font-semibold text-gray-800">Meegle</span>
+        </div>
 
-      {/* Navigation Links */}
-      <div className="hidden md:flex items-center space-x-8">
-        <DropdownMenu
-          title="Why Meegle"
-          options={["Overview", "Features", "Success Stories"]}
-        />
-        <DropdownMenu
-          title="Solutions"
-          options={["Marketing", "Sales", "Customer Support"]}
-        />
-        <button className="text-gray-700 font-medium hover:text-gray-900">
-          Templates
-        </button>
-        <DropdownMenu
-          title="Resources"
-          options={["Blog", "Guides", "FAQs"]}
-        />
-        <button className="text-gray-700 font-medium hover:text-gray-900">
-          Pricing
-        </button>
-      </div>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center space-x-6">
+          <li className="relative group">
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+              <span>Why Meegle</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <li className="relative group">
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+              <span>Solutions</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="#" className="text-gray-700 hover:text-gray-900">
+              Templates
+            </a>
+          </li>
+          <li className="relative group">
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+              <span>Resources</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="#" className="text-gray-700 hover:text-gray-900">
+              Pricing
+            </a>
+          </li>
+        </ul>
 
-      {/* Right Section */}
-      <div className="flex items-center space-x-4">
-        <select
-          className="text-gray-700 border border-gray-300 rounded-md focus:outline-none"
-          defaultValue="EN"
-          aria-label="Language Selector"
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-gray-700 focus:outline-none"
+          onClick={toggleMenu}
         >
-          <option value="EN">EN</option>
-          <option value="ES">ES</option>
-        </select>
-        <button className="text-blue-500 font-medium hover:underline">
-          Sign In
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </button>
-        <button className="px-4 py-2 font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-md">
-          Try for Free
-        </button>
-        <button className="px-4 py-2 text-blue-500 border border-blue-500 rounded-md">
-          Contact Us
-        </button>
+
+        {/* Right Side */}
+        <div className="hidden md:flex items-center space-x-4">
+          {/* Language Selector */}
+          <div className="flex items-center space-x-1 text-gray-700">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 12c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7z"
+              ></path>
+            </svg>
+            <span>EN</span>
+          </div>
+
+          {/* Sign In */}
+          <a href="#" className="text-gray-700 hover:text-gray-900">
+            Sign In
+          </a>
+
+          {/* Try for Free */}
+          <button className="px-4 py-2 text-white bg-gradient-to-p hover:bg-gradient-hover-p rounded-lg">
+            Try for Free
+          </button>
+
+          {/* Contact Us */}
+          <button className="px-4 py-2 text-blue-500 border border-blue-500 rounded-lg">
+            Contact Us
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white">
+          <ul className="flex flex-col items-center space-y-4 py-4">
+            <li>
+              <a href="#" className="text-gray-700 hover:text-gray-900">
+                Why Meegle
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-700 hover:text-gray-900">
+                Solutions
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-700 hover:text-gray-900">
+                Templates
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-700 hover:text-gray-900">
+                Resources
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-700 hover:text-gray-900">
+                Pricing
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

@@ -3,7 +3,7 @@ import jsonData from "../Home/FakeData/Platform.json"
 const AllApps = () => {
     const testimonials = jsonData.testimonials;
     return (
-        <div>
+        <div className="">
              <footer className="text-center py-8">
         <p className="text-4xl font-semibold text-gray-800">
           All the apps you need. In one Lark.
