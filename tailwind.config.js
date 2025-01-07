@@ -32,16 +32,23 @@ module.exports = withMT({
         },
       },
       backgroundImage: {
-        "gradient-to-r": "linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end))",
-        "gradient-hover": "linear-gradient(to right, var(--btn-blue-hover), var(--btn-blue-hover))",
+        "gradient-to-r":
+          "linear-gradient(to right, var(--btn-blue-start), var(--btn-blue-end))",
+        "gradient-hover":
+          "linear-gradient(to right, var(--btn-blue-hover), var(--btn-blue-hover))",
       },
       animation: {
-        scroll: "scroll 20s linear infinite",
+        scroll: "scroll 40s linear infinite",
+        "scroll-reverse": "scroll-reverse 40s linear infinite", 
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        "scroll-reverse": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
       spacing: {
