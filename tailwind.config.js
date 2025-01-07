@@ -38,8 +38,8 @@ module.exports = withMT({
           "linear-gradient(to right, var(--btn-blue-hover), var(--btn-blue-hover))",
       },
       animation: {
-        scroll: "scroll 40s linear infinite",
-        "scroll-reverse": "scroll-reverse 40s linear infinite", 
+        scroll: "scroll 50s linear infinite",
+        "scroll-reverse": "scroll-reverse 50s linear infinite",
       },
       keyframes: {
         scroll: {
@@ -67,13 +67,8 @@ module.exports = withMT({
     function ({ addUtilities }) {
       addUtilities(
         {
-          ".no-scrollbar::-webkit-scrollbar": {
-            display: "none",
-          },
-          ".no-scrollbar": {
-            "-ms-overflow-style": "none",
-            "scrollbar-width": "none",
-          },
+          ".paused": { "animation-play-state": "paused" },
+          ".running": { "animation-play-state": "running" },
         },
         ["responsive", "hover"]
       );

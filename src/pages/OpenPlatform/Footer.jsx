@@ -7,8 +7,9 @@ const Footer = () => {
         {/* Top Section */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Lark Developer Logo */}
-          <div className="col-span-2 md:col-span-1">
-            <h2 className="text-lg font-bold text-gray-dark">Lark Developer</h2>
+          <div className="flex col-span-2 md:col-span-1 gap-1">
+            <img src="https://i.ibb.co.com/CzYmGpN/lark-logo.png" alt="" className="w-6 h-6"/>
+            <h2 className="text-xl font-bold text-gray-dark">Lark Developer</h2>
           </div>
 
           {/* Solutions */}
@@ -55,6 +56,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="border mt-4">
+
         </div>
 
         {/* Bottom Section */}

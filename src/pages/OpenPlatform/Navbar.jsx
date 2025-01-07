@@ -1,38 +1,42 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-6 h-6 bg-gradient-to-tr from-green-400 to-blue-500 rounded-full"></div>
-          <span className="text-lg font-semibold text-gray-800">Lark Developer</span>
+          <img src="https://i.ibb.co.com/CzYmGpN/lark-logo.png" alt="" className="w-6"/>
+          <span className="text-xl font-semibold text-gray-800">Lark Developer</span>
         </div>
 
         {/* Menu Items */}
         <div className="hidden md:flex space-x-8">
           <a
             href="#solutions"
-            className="text-gray-600 hover:text-gray-900 transition"
+            className="text-black hover:text-bluetext transition"
           >
             Solutions
           </a>
           <a
             href="#documentation"
-            className="text-gray-600 hover:text-gray-900 transition"
+            className="text-black hover:text-bluetext transition"
           >
             Documentation
           </a>
           <a
             href="#changelog"
-            className="text-gray-600 hover:text-gray-900 transition"
+            className="text-black hover:text-bluetext transition"
           >
             Changelog
           </a>
           <a
             href="#app-directory"
-            className="text-gray-600 hover:text-gray-900 transition"
+            className="text-black hover:text-bluetext transition"
           >
             App Directory
           </a>
@@ -64,13 +68,13 @@ const Navbar = () => {
           {/* Developer Console Link */}
           <a
             href="#developer-console"
-            className="hidden md:inline-block text-gray-600 hover:text-gray-900 transition"
+            className="hidden md:inline-block text-black hover:text-bluetext transition"
           >
             Developer Console
           </a>
 
           {/* Divider Icon */}
-          <div className="text-gray-400">
+          <div className="text-black cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -88,7 +92,7 @@ const Navbar = () => {
           </div>
 
           {/* Login Button */}
-          <button
+          <button onClick={() => navigate("/signin")}
             type="button"
             className="px-4 py-2 bg-blue text-white font-medium rounded-md hover:bg-blue-hover transition"
           >
