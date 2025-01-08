@@ -1,9 +1,40 @@
 import { FaApple, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { LuLasso } from "react-icons/lu";
+import { useState } from "react";
+import axios from "axios";
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const [isEmailMode, setIsEmailMode] = useState(true);
+  const [email, setEmail] = useState(""); 
+  const [phoneNumber, setPhoneNumber] = useState(""); 
+  const [password, setPassword] = useState(""); 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+
+    const loginData = isEmailMode ? { email, password } : { phoneNumber, password };
+
+    try {
+      // Send POST request to backend using axios
+      const response = await axios.post("http://localhost:5000/signin", loginData, {
+        headers: {
+          "Content-Type": "application/json", 
+        },
+      });
+
+      console.log(response.data); 
+
+      if (response.data.message === "Login successful") {
+        navigate("/dashboard"); 
+      } else {
+        console.error("Login failed:", response.data.message); 
+      }
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data : error.message);
+    }
+  };
 
   return (
     <div className="min-h-screen relative bg-gray-50 flex items-center justify-between">
@@ -21,33 +52,77 @@ const SignIn = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold">Welcome to Lark</h1>
         </div>
-        <form className="mt-4">
+        <form onSubmit={handleSubmit} className="mt-4">
           <div className="flex space-x-4">
             <button
               type="button"
-              className="flex-1 border-b-2 border-blue-500 text-blue-500 font-semibold"
+              className={`flex-1 border-b-2 font-semibold ${
+                isEmailMode ? "border-blue-500 text-blue-500" : "border-transparent text-gray-500"
+              }`}
+              onClick={() => setIsEmailMode(true)}
             >
               Email Address
             </button>
             <button
               type="button"
-              className="flex-1 border-b-2 border-transparent text-gray-500"
+              className={`flex-1 border-b-2 font-semibold ${
+                !isEmailMode ? "border-blue-500 text-blue-500" : "border-transparent text-gray-500"
+              }`}
+              onClick={() => setIsEmailMode(false)}
             >
               Phone Number
             </button>
           </div>
-          <div className="mt-4">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {isEmailMode ? (
+            <>
+              {/* Email and Password Fields */}
+              <div className="mt-4">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="mt-4">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Phone Number and Password Fields */}
+              <div className="mt-4">
+                <input
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  placeholder="Enter your phone number"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="mt-4">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </>
+          )}
           <div className="mt-4 flex items-center">
             <input
               type="checkbox"
               id="terms"
-              className="w-4 h-4 text-blue-500 border-gray-300 rounded"
+              className="w-4 h-4 text-blue-500 border-gray-300 rounded cursor-pointer"
             />
             <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
               I have read and accept the{' '}
@@ -70,7 +145,7 @@ const SignIn = () => {
         <div className="mt-6 text-center text-gray-600">More Login Options</div>
         <div className="mt-4 space-y-2">
           <button className="w-full flex items-center justify-center bg-gray-100 py-2 rounded-md border hover:bg-gray-200">
-            <LuLasso className="mr-3 text-l"/>
+            <LuLasso className="mr-3 text-l" />
             Continue with SSO
           </button>
           <button className="w-full flex items-center justify-center bg-gray-100 py-2 rounded-md border hover:bg-gray-200">
