@@ -1,35 +1,33 @@
-import { FaApple, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { LuLasso } from "react-icons/lu";
 import { useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const SignIn = () => {
   const navigate = useNavigate();
   const [isEmailMode, setIsEmailMode] = useState(true);
-  const [email, setEmail] = useState(""); 
-  const [phoneNumber, setPhoneNumber] = useState(""); 
-  const [password, setPassword] = useState(""); 
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const loginData = isEmailMode ? { email, password } : { phoneNumber, password };
 
     try {
-      // Send POST request to backend using axios
       const response = await axios.post("http://localhost:5000/signin", loginData, {
         headers: {
-          "Content-Type": "application/json", 
+          "Content-Type": "application/json",
         },
       });
 
-      console.log(response.data); 
+      console.log(response.data);
 
       if (response.data.message === "Login successful") {
-        navigate("/dashboard"); 
+        navigate("/dashboard");
       } else {
-        console.error("Login failed:", response.data.message); 
+        console.error("Login failed:", response.data.message);
       }
     } catch (error) {
       console.error("Error:", error.response ? error.response.data : error.message);
@@ -38,7 +36,6 @@ const SignIn = () => {
 
   return (
     <div className="min-h-screen relative bg-gray-50 flex items-center justify-between">
-      {/* Top-Left Logo */}
       <div className="absolute top-4 left-4">
         <img
           src="https://i.ibb.co.com/vZB9rjF/larklogo.png"
@@ -47,7 +44,6 @@ const SignIn = () => {
         />
       </div>
 
-      {/* Left Section */}
       <div className="w-full max-w-md bg-white rounded-md shadow-md p-6 ml-40 mt-16">
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold">Welcome to Lark</h1>
@@ -73,51 +69,57 @@ const SignIn = () => {
               Phone Number
             </button>
           </div>
-          {isEmailMode ? (
-            <>
-              {/* Email and Password Fields */}
-              <div className="mt-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div className="mt-4">
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Phone Number and Password Fields */}
-              <div className="mt-4">
-                <input
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  placeholder="Enter your phone number"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div className="mt-4">
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </>
-          )}
+          <motion.div
+            key={isEmailMode ? "email" : "phone"}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {isEmailMode ? (
+              <>
+                <div className="mt-4">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div className="mt-4">
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter your password"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="mt-4">
+                  <input
+                    type="tel"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    placeholder="Enter your phone number"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div className="mt-4">
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter your password"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </>
+            )}
+          </motion.div>
           <div className="mt-4 flex items-center">
             <input
               type="checkbox"
@@ -125,14 +127,15 @@ const SignIn = () => {
               className="w-4 h-4 text-blue-500 border-gray-300 rounded cursor-pointer"
             />
             <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
-              I have read and accept the{' '}
+              I have read and accept the{" "}
               <a href="#" className="text-blue-500 underline">
                 Terms of Service
-              </a>{' '}
-              and{' '}
+              </a>{" "}
+              and{" "}
               <a href="#" className="text-blue-500 underline">
                 Privacy Policy
-              </a>.
+              </a>
+              .
             </label>
           </div>
           <button
@@ -145,20 +148,20 @@ const SignIn = () => {
         <div className="mt-6 text-center text-gray-600">More Login Options</div>
         <div className="mt-4 space-y-2">
           <button className="w-full flex items-center justify-center bg-gray-100 py-2 rounded-md border hover:bg-gray-200">
-            <LuLasso className="mr-3 text-l" />
+           <img src="https://i.ibb.co.com/2McH37v/SSO.png" alt="" className="w-8 mr-1"/>
             Continue with SSO
           </button>
           <button className="w-full flex items-center justify-center bg-gray-100 py-2 rounded-md border hover:bg-gray-200">
-            <FaGoogle className="mr-3 text-l" />
+            <img src="https://i.ibb.co.com/RQbkDQX/google.webp" alt="" className="w-8 mr-1"/>
             Continue with Google
           </button>
           <button className="w-full flex items-center justify-center bg-gray-100 py-2 rounded-md border hover:bg-gray-200">
-            <FaApple className="mr-3 text-xl" />
+           <img src="https://i.ibb.co.com/GJNKKy1/Apple-Logo.png" alt="" className="w-9 mr-1"/>
             Continue with Apple
           </button>
         </div>
         <div className="mt-4 text-center text-sm text-gray-600">
-          No organization account yet?{' '}
+          No organization account yet?{" "}
           <button
             onClick={() => navigate("/signup")}
             className="text-blue-500 underline"
@@ -167,8 +170,6 @@ const SignIn = () => {
           </button>
         </div>
       </div>
-
-      {/* Right-Side Image */}
       <div className="hidden lg:flex items-center justify-end w-96 h-screen">
         <img
           src="https://i.ibb.co.com/kJRtwq6/Screenshot-2024-12-10-174821.png"

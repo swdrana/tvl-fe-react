@@ -169,7 +169,7 @@ const Together = () => {
 
       {/* Explore Solutions Button */}
       <button
-        className="mt-8 px-6 py-3 bg-gradient-to-p hover:bg-gradient-hover-p text-white text-xl font-semibold rounded-full shadow transition flex items-center"
+        className="mt-8 px-6 py-3 bg-gradient-to-l from-deep-purple-300 to-purple-500 hover:bg-gradient-hover text-white text-xl font-semibold rounded-full shadow transition flex items-center"
       >
         Explore More Features
         <FaArrowCircleRight className="ml-2" />

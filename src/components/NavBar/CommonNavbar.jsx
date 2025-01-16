@@ -146,13 +146,13 @@ export default function CommonNavbar() {
           </button>
           <button
             onClick={() => navigate("/contactsales")}
-            className="text-sm md:text-base font-semibold rounded-full border border-blue-600 px-4 py-2 text-blue-600 hover:bg-slate-200"
+            className="text-sm md:text-base font-semibold rounded-full border border-bluetext px-4 py-2 text-bluetext hover:bg-gray-100"
           >
             Contact us
           </button>
           <button
             onClick={() => navigate("/signup")}
-            className="text-sm md:text-base font-semibold rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+            className="text-sm md:text-base font-semibold rounded-full bg-bluetext px-4 py-2 text-white hover:bg-blue-hover"
           >
             Try for free
           </button>

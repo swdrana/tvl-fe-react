@@ -9,11 +9,13 @@ import CustomerStories from './CustomerStories';
 import SecurityCompliance from './SecurityCompliance';
 import Development from './Development';
 import Partnership from './Partnership';
+import Workflow from './WorkFlow';
 
 const Meegle = () => {
     return (
         <>
         <MeegleBanner></MeegleBanner>
+        <Workflow></Workflow>
         <ProjectManagement></ProjectManagement>
         <Collaboration></Collaboration>
         <Together></Together>

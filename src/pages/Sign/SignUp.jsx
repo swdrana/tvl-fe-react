@@ -2,9 +2,36 @@ import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { IoLogoApple } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 const SignUp = () => {
+
   const navigate = useNavigate();
+
+  // State for email and password
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Function to handle signup
+  const handleSignUp = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/signup", {
+        email,
+        password,
+      });
+
+      if (response.status === 200) {
+        alert("Sign up successful!");
+        navigate("/signin");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error during sign up:", error);
+      alert("Sign up failed. Please check your details and try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row relative">
@@ -13,15 +40,15 @@ const SignUp = () => {
         <button className="text-sm text-gray-700 hover:underline">
           Help Center
         </button>
-            <select
-              className="border border-gray-300 p-2 rounded bg-white text-gray-700 cursor-pointer"
-              onChange={(e) => alert(`Language changed to: ${e.target.value}`)}
-            >
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
-            </select>
+        <select
+          className="border border-gray-300 p-2 rounded bg-white text-gray-700 cursor-pointer"
+          onChange={(e) => alert(`Language changed to: ${e.target.value}`)}
+        >
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+        </select>
       </div>
 
       {/* Left Section */}
@@ -123,10 +150,24 @@ const SignUp = () => {
           type="email"
           placeholder="name@company.com"
           className="border border-gray-300 rounded-md p-3 w-full mb-4"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        {/* Password Input */}
+        <input
+          type="password"
+          placeholder="Enter your password"
+          className="border border-gray-300 rounded-md p-3 w-full mb-4"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         {/* Sign Up Button */}
-        <button className="bg-blue-600 text-white rounded-md px-6 py-3 w-full mb-4">
+        <button
+          className="bg-blue-600 text-white rounded-md px-6 py-3 w-full mb-4"
+          onClick={handleSignUp}
+        >
           Sign Up for Free
         </button>
 
@@ -162,7 +203,7 @@ const SignUp = () => {
           .
         </p>
         <div className="mt-4 text-center text-sm text-gray-600">
-          Already joined in an organization?{' '}
+          Already joined in an organization?{" "}
           <button
             onClick={() => navigate("/signin")}
             className="text-blue-500 underline"

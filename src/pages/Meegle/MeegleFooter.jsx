@@ -84,6 +84,10 @@ const MeegleFooter = () => {
           </div>
         </div>
 
+        <div className="border mt-6 border-gray-300">
+
+        </div>
+
         {/* Social Media Icons and Copyright */}
         <div className="mt-10 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm">
@@ -91,19 +95,19 @@ const MeegleFooter = () => {
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white">
-              <img src="/icons/facebook.svg" alt="Facebook" className="h-5 w-5" />
+              <img src="https://i.ibb.co.com/VqxDh4V/Facebook-logo-square.png" alt="Facebook" className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              <img src="/icons/discord.svg" alt="Discord" className="h-5 w-5" />
+              <img src="https://i.ibb.co.com/zVRXbCq/discord.png" alt="Discord" className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-5 w-5" />
+              <img src="https://i.ibb.co.com/YPQT0NW/Linked-In-logo-initials.png" alt="LinkedIn" className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              <img src="/icons/youtube.svg" alt="YouTube" className="h-5 w-5" />
+              <img src="https://i.ibb.co.com/XJMfxy5/youtube.png" alt="YouTube" className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              <img src="/icons/slack.svg" alt="Slack" className="h-5 w-5" />
+              <img src="https://i.ibb.co.com/tP9TCNj/slack.png" alt="Slack" className="h-5 w-5" />
             </a>
           </div>
         </div>

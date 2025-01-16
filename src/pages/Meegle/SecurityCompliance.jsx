@@ -78,7 +78,7 @@ const SecurityCompliance = () => {
           Limited time offers are available. Pay less to get more today.
         </p>
         <div className="flex justify-center gap-4 mt-6 mb-8">
-  <button className="mt-10 px-6 py-3 bg-gradient-to-p hover:bg-gradient-hover-p text-white text-xl font-semibold rounded-full shadow transition flex items-center">
+  <button className="mt-10 px-6 py-3 bg-gradient-to-r hover:bg-gradient-hover text-white text-xl font-semibold rounded-full shadow transition flex items-center">
     Try for Free <FaArrowCircleRight className="ml-2" />
   </button>
   <button className="mt-10 px-6 py-3 bg-white text-bluetext border border-bluetext rounded-full hover:bg-gray-300 transition">
